@@ -167,7 +167,7 @@ var saveToLocal = {
 </li>
 </ol>
 <h2 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h2><ol>
-<li><p>cd –change dir 更改目录</p>
+<li><p>cd —change dir 更改目录</p>
 <ul>
 <li>打开用户家目录的几种方式<ul>
 <li>空/空格</li>
@@ -181,7 +181,6 @@ var saveToLocal = {
 <li><p>tree</p>
 <p>如果不存在需要安装</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo yum -y install tree</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <p>-C 以颜色区分文件</p>
 </li>
 <li><p>mkdir 创建目录</p>
@@ -206,8 +205,7 @@ var saveToLocal = {
 </li>
 </ol>
 <h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><ol>
-<li><p>touch 文件如果不存在则创建,如果存在更改访问时间</p>
-</li>
+<li>touch 文件如果不存在则创建,如果存在更改访问时间</li>
 <li><p>rm 删除文件或者目录 </p>
 <ul>
 <li>-r  递归删除子目录</li>
@@ -228,8 +226,7 @@ var saveToLocal = {
 </li>
 </ul>
 </li>
-<li><p>mv (move)移动文件或者目录</p>
-<ul>
+<li>mv (move)移动文件或者目录<ul>
 <li>mv 文件名 新文件名  改文件名</li>
 </ul>
 </li>
@@ -259,7 +256,7 @@ var saveToLocal = {
 </li>
 </ol>
 <h2 id="统计信息相关"><a href="#统计信息相关" class="headerlink" title="统计信息相关"></a>统计信息相关</h2><ol>
-<li>wc  — word cout 统计文件内容<ul>
+<li>wc  —- word cout 统计文件内容<ul>
 <li>-l  显示行</li>
 <li>-w 单词</li>
 <li>-c  字节数</li>
@@ -321,7 +318,7 @@ var saveToLocal = {
 </li>
 <li><p>chown与chgrp 改变用户和改变组 </p>
 </li>
-<li><p>–需要用管理员root去修改文件归属</p>
+<li><p>—需要用管理员root去修改文件归属</p>
 </li>
 <li><p>chown 用户:组  文件名|目录</p>
 </li>
@@ -347,7 +344,7 @@ var saveToLocal = {
 </li>
 <li><p>find ./ -maxdepth       1 -size +1M 当前路径下大于1M</p>
 </li>
-<li><p>find ./ -maxdepth      2 -size +1M -exec ls -l {} ;  -ok 相对安全模式,没一条指令都提示</p>
+<li><p>find ./ -maxdepth      2 -size +1M -exec ls -l {} \;  -ok 相对安全模式,没一条指令都提示</p>
 </li>
 </ul>
 </li>
@@ -361,12 +358,11 @@ var saveToLocal = {
 <li>tail -f      tcpsvr.1705 |grep connect   分析日志 </li>
 </ul>
 </li>
-<li><p>locate 以文件名查找文件，从数据库查找，更新数据库使用updatedb命令</p>
-</li>
+<li>locate 以文件名查找文件，从数据库查找，更新数据库使用updatedb命令</li>
 </ol>
 <h2 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h2><ol>
 <li>zip<ul>
-<li>zip -r 压缩包名 原材料  – -r代表递归子目录 </li>
+<li>zip -r 压缩包名 原材料  — -r代表递归子目录 </li>
 <li>zip -r bb.zip bb hello</li>
 <li>unzip bb.zip 解压</li>
 </ul>
@@ -389,8 +385,8 @@ var saveToLocal = {
 <li>rar <ul>
 <li>a 代表压缩</li>
 <li>-r 递归子目录</li>
-<li>rar a -r  压缩包(可以无后缀)  原材料   — 打包</li>
-<li>rar x 压缩包名  — 释放</li>
+<li>rar a -r  压缩包(可以无后缀)  原材料   —- 打包</li>
+<li>rar x 压缩包名  —- 释放</li>
 </ul>
 </li>
 </ol>
