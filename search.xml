@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Win10局域网文件共享手机访问</title>
+      <link href="2018/10/22/Win10%E5%B1%80%E5%9F%9F%E7%BD%91%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%89%8B%E6%9C%BA%E8%AE%BF%E9%97%AE/"/>
+      <url>2018/10/22/Win10%E5%B1%80%E5%9F%9F%E7%BD%91%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%89%8B%E6%9C%BA%E8%AE%BF%E9%97%AE/</url>
+      
+        <content type="html"><![CDATA[<p>关于通过win10电脑使用局域网共享文件，手机访问一直提示权限不足，今天终于找到了解决方法。</p><h2 id="电脑端设置"><a href="#电脑端设置" class="headerlink" title="电脑端设置"></a>电脑端设置</h2><ol><li><p>选择要共享的硬盘/U盘/移动硬盘等，鼠标右键选择授予访问权限-&gt;高级共享；</p></li><li><p>点击高级共享，勾选共享此文件夹，点确定，也可以点权限设置用户权限，默认只有读权限；</p></li><li><p>点密码保护下面的网络和共享中心进行设置；</p></li><li><p>进入计算机管理，可鼠标右键桌面此电脑图标选择管理打开</p></li><li><p>选择本地用户和组，鼠标右键选择新建用户，填好用户名和明码；</p></li><li><p>再刚刚新建的用户处，鼠标右键选择设置密码，会弹出提示窗口，选择继续；</p></li><li><p>设置好密码，至此电脑端的设置完成；</p></li></ol><h2 id="手机端设置"><a href="#手机端设置" class="headerlink" title="手机端设置"></a>手机端设置</h2><p>以ios设备为例</p><ol><li><p>打开有关软件，以FE文件管理为例；</p></li><li><p>点击右上角+号，选择Windows，往下拉，再网络邻居下选择你的电脑名字的选项，选择注册的用户</p></li><li><p>弹出设置账号密码选项，将电脑端设置的账号密码输入进去后选择保存&amp;登录；</p></li><li><p>至此手机端设置完成，以后可以在FE文件管理应用首页就可以进入浏览共享的文件了。</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Windows </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+            <tag> 局域网文件共享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vim基础</title>
       <link href="2018/10/16/Vim%E5%9F%BA%E7%A1%80/"/>
       <url>2018/10/16/Vim%E5%9F%BA%E7%A1%80/</url>
@@ -48,33 +75,6 @@
         <tags>
             
             <tag> 黑苹果 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Win10局域网文件共享手机访问</title>
-      <link href="2018/06/12/Win10%E5%B1%80%E5%9F%9F%E7%BD%91%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%89%8B%E6%9C%BA%E8%AE%BF%E9%97%AE/"/>
-      <url>2018/06/12/Win10%E5%B1%80%E5%9F%9F%E7%BD%91%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%89%8B%E6%9C%BA%E8%AE%BF%E9%97%AE/</url>
-      
-        <content type="html"><![CDATA[<p>关于通过win10电脑使用局域网共享文件，手机访问一直提示权限不足，今天终于找到了解决方法。</p><h2 id="电脑端设置"><a href="#电脑端设置" class="headerlink" title="电脑端设置"></a>电脑端设置</h2><ol><li><p>选择要共享的硬盘/U盘/移动硬盘等，鼠标右键选择授予访问权限-&gt;高级共享；</p></li><li><p>点击高级共享，勾选共享此文件夹，点确定，也可以点权限设置用户权限，默认只有读权限；</p></li><li><p>点密码保护下面的网络和共享中心进行设置；</p></li><li><p>进入计算机管理，可鼠标右键桌面此电脑图标选择管理打开</p></li><li><p>选择本地用户和组，鼠标右键选择新建用户，填好用户名和明码；</p></li><li><p>再刚刚新建的用户处，鼠标右键选择设置密码，会弹出提示窗口，选择继续；</p></li><li><p>设置好密码，至此电脑端的设置完成；</p></li></ol><h2 id="手机端设置"><a href="#手机端设置" class="headerlink" title="手机端设置"></a>手机端设置</h2><p>以ios设备为例</p><ol><li><p>打开有关软件，以FE文件管理为例；</p></li><li><p>点击右上角+号，选择Windows，往下拉，再网络邻居下选择你的电脑名字的选项，选择注册的用户</p></li><li><p>弹出设置账号密码选项，将电脑端设置的账号密码输入进去后选择保存&amp;登录；</p></li><li><p>至此手机端设置完成，以后可以在FE文件管理应用首页就可以进入浏览共享的文件了。</p></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> Windows </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Windows </tag>
-            
-            <tag> 局域网文件共享 </tag>
             
         </tags>
       
