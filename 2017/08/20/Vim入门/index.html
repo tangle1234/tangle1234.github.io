@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vim入门 | Tangle</title><meta name="keywords" content="Linux,vim"><meta name="author" content="Tangle"><meta name="copyright" content="Tangle"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="Vim基础操作 进入插入模式：i光标当前插入，a当前光标后插入，o向下增加一行插入，I行首插入，A行尾插入，O向上插入一行插入；  插入模式下：  ctrl+h 删除一个字符 ctrl+w删除一个单词 ctrl+u删除到行首 ctrl+e向上一次滚动一行   normal模式下：  ctrl+f向下翻页 ctrl+b向上翻页 ctrl+d向下翻半页 ctrl+u向上翻半页   k&#x2F;j&#x2F;l&#x2F;l上下左">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vim入门 | Tangle</title><meta name="keywords" content="Linux,vim"><meta name="author" content="Tangle"><meta name="copyright" content="Tangle"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="Vim基础操作   进入插入模式：i光标当前插入，a当前光标后插入，o向下增加一行插入，I行首插入，A行尾插入，O向上插入一行插入；   插入模式下：  ctrl+h 删除一个字符 ctrl+w删除一个单词 ctrl+u删除到行首 ctrl+e向上一次滚动一行    normal模式下：  ctrl+f向下翻页 ctrl+b向上翻页 ctrl+d向下翻半页 ctrl+u向上翻半页    k&#x2F;j&#x2F;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vim入门">
 <meta property="og:url" content="https://letanga.github.io/2017/08/20/Vim%E5%85%A5%E9%97%A8/index.html">
 <meta property="og:site_name" content="Tangle">
-<meta property="og:description" content="Vim基础操作 进入插入模式：i光标当前插入，a当前光标后插入，o向下增加一行插入，I行首插入，A行尾插入，O向上插入一行插入；  插入模式下：  ctrl+h 删除一个字符 ctrl+w删除一个单词 ctrl+u删除到行首 ctrl+e向上一次滚动一行   normal模式下：  ctrl+f向下翻页 ctrl+b向上翻页 ctrl+d向下翻半页 ctrl+u向上翻半页   k&#x2F;j&#x2F;l&#x2F;l上下左">
+<meta property="og:description" content="Vim基础操作   进入插入模式：i光标当前插入，a当前光标后插入，o向下增加一行插入，I行首插入，A行尾插入，O向上插入一行插入；   插入模式下：  ctrl+h 删除一个字符 ctrl+w删除一个单词 ctrl+u删除到行首 ctrl+e向上一次滚动一行    normal模式下：  ctrl+f向下翻页 ctrl+b向上翻页 ctrl+d向下翻半页 ctrl+u向上翻半页    k&#x2F;j&#x2F;">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s2.ax1x.com/2019/12/23/lpZIxK.jpg">
 <meta property="article:published_time" content="2017-08-20T06:25:26.000Z">
-<meta property="article:modified_time" content="2020-09-30T06:41:01.117Z">
+<meta property="article:modified_time" content="2020-10-01T02:40:59.106Z">
 <meta property="article:author" content="Tangle">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="vim">
@@ -81,7 +81,7 @@ var saveToLocal = {
   isHome: false,
   isHighlightShrink: false,
   isSidebar: true,
-  postUpdate: '2020-09-30 14:41:01'
+  postUpdate: '2020-10-01 10:40:59'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -143,10 +143,13 @@ var saveToLocal = {
     if (t === 'dark') activateDarkMode()
     else if (t === 'light') activateLightMode()
   }
-})()</script><style type="text/css">#toggle-sidebar {bottom: 80px}</style><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://s1.ax1x.com/2020/05/01/Jje1fS.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">16</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">15</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">Vim基础操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vim%E5%9F%BA%E7%A1%80%E5%B8%B8%E8%AF%86"><span class="toc-number">2.</span> <span class="toc-text">Vim基础常识</span></a></li></ol></div></div></div><header class="no-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Tangle</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav></header><main class="layout_post" id="content-inner"><article id="post"><div id="post-info"><div id="post-title"><div class="posttitle">Vim入门</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2017-08-20T06:25:26.000Z" title="发表于 2017-08-20 14:25:26">2017-08-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-09-30T06:41:01.117Z" title="更新于 2020-09-30 14:41:01">2020-09-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Linux/">Linux</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div><div class="post-content" id="article-container"><h2 id="Vim基础操作"><a href="#Vim基础操作" class="headerlink" title="Vim基础操作"></a>Vim基础操作</h2><ol>
-<li><p>进入插入模式：i光标当前插入，a当前光标后插入，o向下增加一行插入，I行首插入，A行尾插入，O向上插入一行插入；</p>
+})()</script><style type="text/css">#toggle-sidebar {bottom: 80px}</style><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://s1.ax1x.com/2020/05/01/Jje1fS.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">16</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">15</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#vim%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text"> Vim基础操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vim%E5%9F%BA%E7%A1%80%E5%B8%B8%E8%AF%86"><span class="toc-number">2.</span> <span class="toc-text"> Vim基础常识</span></a></li></ol></div></div></div><header class="no-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Tangle</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav></header><main class="layout_post" id="content-inner"><article id="post"><div id="post-info"><div id="post-title"><div class="posttitle">Vim入门</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2017-08-20T06:25:26.000Z" title="发表于 2017-08-20 14:25:26">2017-08-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-10-01T02:40:59.106Z" title="更新于 2020-10-01 10:40:59">2020-10-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Linux/">Linux</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div><div class="post-content" id="article-container"><h2 id="vim基础操作"><a class="markdownIt-Anchor" href="#vim基础操作"></a> Vim基础操作</h2>
+<ol>
+<li>
+<p>进入插入模式：i光标当前插入，a当前光标后插入，o向下增加一行插入，I行首插入，A行尾插入，O向上插入一行插入；</p>
 </li>
-<li><p>插入模式下：</p>
+<li>
+<p>插入模式下：</p>
 <ul>
 <li>ctrl+h 删除一个字符</li>
 <li>ctrl+w删除一个单词</li>
@@ -154,7 +157,8 @@ var saveToLocal = {
 <li>ctrl+e向上一次滚动一行</li>
 </ul>
 </li>
-<li><p>normal模式下：</p>
+<li>
+<p>normal模式下：</p>
 <ul>
 <li>ctrl+f向下翻页</li>
 <li>ctrl+b向上翻页</li>
@@ -162,70 +166,102 @@ var saveToLocal = {
 <li>ctrl+u向上翻半页</li>
 </ul>
 </li>
-<li><p>k/j/l/l上下左右键；</p>
+<li>
+<p>k/j/l/l上下左右键；</p>
 </li>
-<li><p>ctrl+[或ctrl+c相当于按esc键；</p>
+<li>
+<p>ctrl+[或ctrl+c相当于按esc键；</p>
 </li>
-<li><p>gi快速返回到上次编辑位置；</p>
+<li>
+<p>gi快速返回到上次编辑位置；</p>
 </li>
-<li><p>w/W下个单词开头；</p>
+<li>
+<p>w/W下个单词开头；</p>
 </li>
-<li><p>e/E下个单词结尾；</p>
+<li>
+<p>e/E下个单词结尾；</p>
 </li>
-<li><p>b/B上个单词开头；</p>
+<li>
+<p>b/B上个单词开头；</p>
 </li>
-<li><p>关于word/WORD：不以/以空格为分割的单词；</p>
+<li>
+<p>关于word/WORD：不以/以空格为分割的单词；</p>
 </li>
-<li><p>f+一个字符：跳转该行到第一个匹配的字符，按，跳转到上个匹配字符，按；跳转到下个匹配的字符，F+一个字符则相反；</p>
+<li>
+<p>f+一个字符：跳转该行到第一个匹配的字符，按，跳转到上个匹配字符，按；跳转到下个匹配的字符，F+一个字符则相反；</p>
 </li>
-<li><p>按0跳到行首，^跳到行首非空字符，$跳到行尾；</p>
+<li>
+<p>按0跳到行首，^跳到行首非空字符，$跳到行尾；</p>
 </li>
-<li><p>按{}()跳到以空行为分割的段首/段尾；</p>
+<li>
+<p>按{}()跳到以空行为分割的段首/段尾；</p>
 </li>
-<li><p>gg/G跳到文首/文尾；</p>
+<li>
+<p>gg/G跳到文首/文尾；</p>
 </li>
-<li><p>nG跳到n行；</p>
+<li>
+<p>nG跳到n行；</p>
 </li>
-<li><p>H/M/L跳到开头/中间/结尾；</p>
+<li>
+<p>H/M/L跳到开头/中间/结尾；</p>
 </li>
-<li><p>ctrl+o快速返回上次编辑的地方；</p>
+<li>
+<p>ctrl+o快速返回上次编辑的地方；</p>
 </li>
-<li><p>zz把屏幕置为中间；</p>
+<li>
+<p>zz把屏幕置为中间；</p>
 </li>
-<li><p>x删除一个字符；</p>
+<li>
+<p>x删除一个字符；</p>
 </li>
-<li><p>dw删除一个单词，diw删除一个word，daw删除一个WORD；</p>
+<li>
+<p>dw删除一个单词，diw删除一个word，daw删除一个WORD；</p>
 </li>
-<li><p>dd删除一行，ndd删除n行，dt）删除到）的内容，d$删除到行尾，d0删除到行首；</p>
+<li>
+<p>dd删除一行，ndd删除n行，dt）删除到）的内容，d$删除到行尾，d0删除到行首；</p>
 </li>
-<li><p>v进入视图模式，V进入试图模式以行为选择单位；</p>
+<li>
+<p>v进入视图模式，V进入试图模式以行为选择单位；</p>
 </li>
-<li><p>r+字符将光标字符替换为输入字符；</p>
+<li>
+<p>r+字符将光标字符替换为输入字符；</p>
 </li>
-<li><p>s+字符将光标字符替换为输入字符并进入插入模式；</p>
+<li>
+<p>s+字符将光标字符替换为输入字符并进入插入模式；</p>
 </li>
-<li><p>4s删除4个字符替换并进入插入模式；</p>
+<li>
+<p>4s删除4个字符替换并进入插入模式；</p>
 </li>
-<li><p>R一直替换后面的字符，S整行删除并进入插入模式；</p>
+<li>
+<p>R一直替换后面的字符，S整行删除并进入插入模式；</p>
 </li>
-<li><p>ciw删除一个word进行更改，caw删除一个WORD进行更改；</p>
+<li>
+<p>ciw删除一个word进行更改，caw删除一个WORD进行更改；</p>
 </li>
-<li><p>ct)删除到)的内容进行更改；</p>
+<li>
+<p>ct)删除到)的内容进行更改；</p>
 </li>
-<li><p>set hls设置高亮；</p>
+<li>
+<p>set hls设置高亮；</p>
 </li>
-<li><p>/前向搜索，？反向搜索，按n/N跳到下/上一个匹配</p>
+<li>
+<p>/前向搜索，？反向搜索，按n/N跳到下/上一个匹配</p>
 </li>
-<li><p>替换命令：</p>
+<li>
+<p>替换命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:[range]s[ubstitude]/&#123;pattern&#125;/&#123;string&#125;/flags</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>range，比如10，20表示第10行到20行，%表示全部</p>
+<li>
+<p>range，比如10，20表示第10行到20行，%表示全部</p>
 </li>
-<li><p>pattern要替换的格式</p>
+<li>
+<p>pattern要替换的格式</p>
 </li>
-<li><p>string替换后文本</p>
+<li>
+<p>string替换后文本</p>
 </li>
-<li><p>flags</p>
+<li>
+<p>flags</p>
 <ul>
 <li>g全局</li>
 <li>c确认，可以确认或拒绝修改</li>
@@ -234,60 +270,85 @@ var saveToLocal = {
 </li>
 </ul>
 </li>
-<li><p>精确匹配替换</p>
+<li>
+<p>精确匹配替换</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:%s/\&lt;quack\&gt;/jiao/</span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
-<h2 id="Vim基础常识"><a href="#Vim基础常识" class="headerlink" title="Vim基础常识"></a>Vim基础常识</h2><ol>
-<li><p>buffer:打开的一个文件的内存缓冲区；</p>
+<h2 id="vim基础常识"><a class="markdownIt-Anchor" href="#vim基础常识"></a> Vim基础常识</h2>
+<ol>
+<li>
+<p>buffer:打开的一个文件的内存缓冲区；</p>
 </li>
-<li><p>窗口:buffer可视化的分割区域；</p>
+<li>
+<p>窗口:buffer可视化的分割区域；</p>
 </li>
-<li><p>tab:可以组织窗口为一个工作区；</p>
+<li>
+<p>tab:可以组织窗口为一个工作区；</p>
 </li>
-<li><p>buffer切换，：ls列出当前buffer，：b n跳到第n个buffer；:b pre/next/first/last跳到前一个/下一个/第一个/最后一个buffer；</p>
+<li>
+<p>buffer切换，：ls列出当前buffer，：b n跳到第n个buffer；:b pre/next/first/last跳到前一个/下一个/第一个/最后一个buffer；</p>
 </li>
-<li><p>一个缓冲区可以分割多个窗口，每个窗口可以打开不同的缓冲区；</p>
+<li>
+<p>一个缓冲区可以分割多个窗口，每个窗口可以打开不同的缓冲区；</p>
 </li>
-<li><p>：vsp垂直分割窗口，</p>
+<li>
+<p>：vsp垂直分割窗口，</p>
 </li>
-<li><p>：sp垂直分割窗口；</p>
+<li>
+<p>：sp垂直分割窗口；</p>
 </li>
-<li><p>ctrl+h/j/k/l移动到左/下/上/右窗口；</p>
+<li>
+<p>ctrl+h/j/k/l移动到左/下/上/右窗口；</p>
 </li>
-<li><p>ctrl+H/J/K/L将当前窗口移动到左/下/上/右；</p>
+<li>
+<p>ctrl+H/J/K/L将当前窗口移动到左/下/上/右；</p>
 </li>
-<li><p>tab标签页，将窗口分组；</p>
+<li>
+<p>tab标签页，将窗口分组；</p>
 </li>
-<li><p>新建标签页，:tabnew 文件名；</p>
+<li>
+<p>新建标签页，:tabnew 文件名；</p>
 </li>
-<li><p>gt切换下一个标签页，gT切换上一个标签页；</p>
+<li>
+<p>gt切换下一个标签页，gT切换上一个标签页；</p>
 </li>
-<li><p>tab filename 在新建标签页打开filename文件；</p>
+<li>
+<p>tab filename 在新建标签页打开filename文件；</p>
 </li>
-<li><p>:tabc(lose)关闭当前标签页；</p>
+<li>
+<p>:tabc(lose)关闭当前标签页；</p>
 </li>
-<li><p>:tabo(oly)只保留当前标签页；</p>
+<li>
+<p>:tabo(oly)只保留当前标签页；</p>
 </li>
-<li><p>文本对象：</p>
+<li>
+<p>文本对象：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[number]&lt;<span class="built_in">command</span>&gt;[text object]</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>viw选中一个word；</p>
+<li>
+<p>viw选中一个word；</p>
 </li>
-<li><p>vaw选择一个WORD；</p>
+<li>
+<p>vaw选择一个WORD；</p>
 </li>
-<li><p>复制粘贴：y/p，v选中，p粘贴，yiw复制一个word，yaw复制一个WORD；</p>
+<li>
+<p>复制粘贴：y/p，v选中，p粘贴，yiw复制一个word，yaw复制一个WORD；</p>
 </li>
-<li><p>yy复制一行，dd剪切一行，nyy复制n行，ndd剪切n行；</p>
+<li>
+<p>yy复制一行，dd剪切一行，nyy复制n行，ndd剪切n行；</p>
 </li>
-<li><p>插入模式下，ctrl+c复制，ctrl+v粘贴；</p>
+<li>
+<p>插入模式下，ctrl+c复制，ctrl+v粘贴；</p>
 </li>
-<li><p>:set autoindent设置自动换行；</p>
+<li>
+<p>:set autoindent设置自动换行；</p>
 </li>
-<li><p>设置自动换行后粘贴后混乱，:set paste粘贴后再:set nopaste使自动换行继续起作用；</p>
+<li>
+<p>设置自动换行后粘贴后混乱，:set paste粘贴后再:set nopaste使自动换行继续起作用；</p>
 </li>
-<li><p>vim的寄存器</p>
+<li>
+<p>vim的寄存器</p>
 <ul>
 <li>默认使用无名寄存器</li>
 <li>ayiw 复制到a寄存器，biw复制到b寄存器</li>
@@ -299,49 +360,106 @@ var saveToLocal = {
 <li>”，上次插入的文本</li>
 </ul>
 </li>
-<li><p>:echo has(‘clipboard’)，显示1代表支持clipboard，:set clipboard=unaned后可以直接对系统剪贴板进行操作；</p>
+<li>
+<p>:echo has(‘clipboard’)，显示1代表支持clipboard，:set clipboard=unaned后可以直接对系统剪贴板进行操作；</p>
 </li>
-<li><p>:e!不保存更改重新加载文件；</p>
+<li>
+<p>:e!不保存更改重新加载文件；</p>
 </li>
-<li><p>:colorscheme查看当前配色，:colorscheme ctrl+d查看系统提供的配色，:colorscheme 配色名字 选择配色；</p>
+<li>
+<p>:colorscheme查看当前配色，:colorscheme ctrl+d查看系统提供的配色，:colorscheme 配色名字 选择配色；</p>
 </li>
-<li><p>:syntax on打开高亮；</p>
+<li>
+<p>:syntax on打开高亮；</p>
 </li>
-<li><p>宏，q+寄存器录制操作，再按q停止录制，v进入视图模式选择要操作的文本，@寄存器重复宏操作（录制的操作）；</p>
+<li>
+<p>宏，q+寄存器录制操作，再按q停止录制，v进入视图模式选择要操作的文本，@寄存器重复宏操作（录制的操作）；</p>
 </li>
-<li><p>按v进入视图选择要操作的文本，:’&lt;’&gt;normal @a，选中文本进行宏操作；</p>
+<li>
+<p>按v进入视图选择要操作的文本，:’&lt;’&gt;normal @a，选中文本进行宏操作；</p>
 </li>
-<li><p>不使用宏，:’&lt;’&gt;normal 依次输入操作表示对选中文本各行进行操作；</p>
+<li>
+<p>不使用宏，:’&lt;’&gt;normal 依次输入操作表示对选中文本各行进行操作；</p>
 </li>
-<li><p>ctrl+n/p补全单词；</p>
+<li>
+<p>ctrl+n/p补全单词；</p>
 </li>
-<li><p>ctrl+x+f补全文件名；</p>
+<li>
+<p>ctrl+x+f补全文件名；</p>
 </li>
-<li><p>ctrl+x+o配合插件进行补全；</p>
+<li>
+<p>ctrl+x+o配合插件进行补全；</p>
 </li>
-<li><p>配置文件~/.vimrc；</p>
+<li>
+<p>配置文件~/.vimrc；</p>
 </li>
-<li><p>常用设置及映射，set nu设置行号，colorscheme 配色名字 修改配色，syntax on打开高亮，set hlssearch设置搜索高亮，set pasteloggle=<F2>设置F2键映射为:set passte；</p>
+<li>
+<p>常用设置及映射，set nu设置行号，colorscheme 配色名字 修改配色，syntax on打开高亮，set hlssearch设置搜索高亮，set pasteloggle=<F2>设置F2键映射为:set passte；</p>
 </li>
-<li><p>设置,为leader键，let mapleder=”,”</p>
+<li>
+<p>设置,为leader键，let mapleder=&quot;,&quot;</p>
 </li>
-<li><p>inoremap，i表示插入模式，nore表示非递归，map表示映射；</p>
+<li>
+<p>inoremap，i表示插入模式，nore表示非递归，map表示映射；</p>
 </li>
-<li><p>inoremap <leader>w<ESC>:w<cr>设置leader键加w键代替系统的:w回车；</p>
+<li>
+<p>inoremap <leader>w<ESC>:w<cr>设置leader键加w键代替系统的:w回车；</p>
 </li>
-<li><p>vim脚本vimscript；</p>
+<li>
+<p>vim脚本vimscript；</p>
 </li>
-<li><p>映射：把一个操作映射到另一个操作；</p>
+<li>
+<p>映射：把一个操作映射到另一个操作；</p>
 </li>
-<li><p>:map - x用-代替x删除字符；</p>
+<li>
+<p>:map - x用-代替x删除字符；</p>
 </li>
-<li><p>:map <space> viw用空格键代替进入视图模式并选中一个word；</p>
+<li>
+<p>:map <space> viw用空格键代替进入视图模式并选中一个word；</p>
 </li>
-<li><p>映射有关n/v/i分别表示normal模式/视图模式/插入模式；</p>
+<li>
+<p>映射有关n/v/i分别表示normal模式/视图模式/插入模式；</p>
 </li>
 </ol>
-</div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Linux/">Linux</a><a class="post-meta__tags" href="/tags/vim/">vim</a></div><div class="post_share"><div class="social-share" data-image="https://s2.ax1x.com/2019/12/23/lpZIxK.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2017/09/03/Win10%E5%B1%80%E5%9F%9F%E7%BD%91%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%89%8B%E6%9C%BA%E8%AE%BF%E9%97%AE/"><img class="prev-cover" src="https://s2.ax1x.com/2020/01/17/1SnoL9.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Win10局域网文件共享手机访问</div></div></a></div><div class="next-post pull-right"><a href="/2017/08/15/Linux%E8%BE%BE%E4%BA%BA%E5%85%BB%E6%88%90%E8%AE%A1%E5%88%922/"><img class="next-cover" src="https://s2.ax1x.com/2020/01/17/1SuCdI.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Linux达人养成计划2</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2018/09/10/Vim常用插件/" title="Vim常用插件"><img class="cover" src="https://s2.ax1x.com/2019/12/23/lpZIxK.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2018-09-10</div><div class="title">Vim常用插件</div></div></a></div><div><a href="/2016/03/10/Centos7删除多余内核/" title="Centos7删除多余内核"><img class="cover" src="https://s2.ax1x.com/2020/01/17/1Sn5M4.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2016-03-10</div><div class="title">Centos7删除多余内核</div></div></a></div><div><a href="/2016/04/16/Linux基础/" title="Linux基础"><img class="cover" src="https://s2.ax1x.com/2020/01/17/1SuCdI.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2016-04-16</div><div class="title">Linux基础</div></div></a></div><div><a href="/2017/07/11/Linux达人养成计划1/" title="Linux达人养成计划1"><img class="cover" src="https://s2.ax1x.com/2020/01/17/1SuCdI.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2017-07-11</div><div class="title">Linux达人养成计划1</div></div></a></div><div><a href="/2017/08/15/Linux达人养成计划2/" title="Linux达人养成计划2"><img class="cover" src="https://s2.ax1x.com/2020/01/17/1SuCdI.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2017-08-15</div><div class="title">Linux达人养成计划2</div></div></a></div></div></div></article></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2016 - 2020 By Tangle</div><div class="framework-info"><!-- span= _p('footer.framework') + ' '--><!-- a(href='https://hexo.io')= 'Hexo'--><!-- span.footer-separator |--><!-- span= _p('footer.theme') + ' '--><!-- a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'--></div><div class="footer_custom_text">Hi, welcome to my <a href="https://letanga.github.io/">blog</a>!</div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
- <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="aplayer no-destroy" data-id="2780031324" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="auto" data-autoplay="false" muted></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+</div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Linux/">Linux</a><a class="post-meta__tags" href="/tags/vim/">vim</a></div><div class="post_share"><div class="social-share" data-image="https://s2.ax1x.com/2019/12/23/lpZIxK.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2017/09/03/Win10%E5%B1%80%E5%9F%9F%E7%BD%91%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%89%8B%E6%9C%BA%E8%AE%BF%E9%97%AE/"><img class="prev-cover" src="https://s2.ax1x.com/2020/01/17/1SnoL9.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Win10局域网文件共享手机访问</div></div></a></div><div class="next-post pull-right"><a href="/2017/08/15/Linux%E8%BE%BE%E4%BA%BA%E5%85%BB%E6%88%90%E8%AE%A1%E5%88%922/"><img class="next-cover" src="https://s2.ax1x.com/2020/01/17/1SuCdI.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Linux达人养成计划2</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2018/09/10/Vim常用插件/" title="Vim常用插件"><img class="cover" src="https://s2.ax1x.com/2019/12/23/lpZIxK.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2018-09-10</div><div class="title">Vim常用插件</div></div></a></div><div><a href="/2016/03/10/Centos7删除多余内核/" title="Centos7删除多余内核"><img class="cover" src="https://s2.ax1x.com/2020/01/17/1Sn5M4.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2016-03-10</div><div class="title">Centos7删除多余内核</div></div></a></div><div><a href="/2016/04/16/Linux基础/" title="Linux基础"><img class="cover" src="https://s2.ax1x.com/2020/01/17/1SuCdI.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2016-04-16</div><div class="title">Linux基础</div></div></a></div><div><a href="/2017/07/11/Linux达人养成计划1/" title="Linux达人养成计划1"><img class="cover" src="https://s2.ax1x.com/2020/01/17/1SuCdI.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2017-07-11</div><div class="title">Linux达人养成计划1</div></div></a></div><div><a href="/2017/08/15/Linux达人养成计划2/" title="Linux达人养成计划2"><img class="cover" src="https://s2.ax1x.com/2020/01/17/1SuCdI.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2017-08-15</div><div class="title">Linux达人养成计划2</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></article></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2016 - 2020 By Tangle</div><div class="framework-info"><!-- span= _p('footer.framework') + ' '--><!-- a(href='https://hexo.io')= 'Hexo'--><!-- span.footer-separator |--><!-- span= _p('footer.theme') + ' '--><!-- a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'--></div><div class="footer_custom_text">Hi, welcome to my <a href="https://letanga.github.io/">blog</a>!</div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const initData = {
+      el: '#vcomment',
+      appId: 'naJaIbSuo1stR1TBwyyAUJO0-gzGzoHsz',
+      appKey: 'b8K2UcMoMjOg7RqUKXAuENHa',
+      placeholder: 'Please leave your footprints',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'en',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="aplayer no-destroy" data-id="2780031324" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="auto" data-autoplay="false" muted></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
   'title',
   '#config_change',
   '#body-wrap',
