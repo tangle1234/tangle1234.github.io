@@ -97,8 +97,6 @@
             
             <tag> 电子 </tag>
             
-            <tag> 模电 </tag>
-            
         </tags>
       
     </entry>
@@ -123,8 +121,6 @@
         <tags>
             
             <tag> 电子 </tag>
-            
-            <tag> 模电 </tag>
             
         </tags>
       
@@ -359,7 +355,7 @@
             
             <tag> Windows </tag>
             
-            <tag> 局域网文件共享 </tag>
+            <tag> 文件共享 </tag>
             
         </tags>
       
@@ -596,8 +592,6 @@
             
             <tag> 数据结构 </tag>
             
-            <tag> 算法 </tag>
-            
         </tags>
       
     </entry>
@@ -622,8 +616,6 @@
         <tags>
             
             <tag> 数据结构 </tag>
-            
-            <tag> 算法 </tag>
             
         </tags>
       
