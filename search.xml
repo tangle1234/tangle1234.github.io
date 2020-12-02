@@ -156,6 +156,31 @@
     
     
     <entry>
+      <title>Win系统将任意应用程序添加到运行命令</title>
+      <link href="2018/03/15/Win%E7%B3%BB%E7%BB%9F%E5%B0%86%E4%BB%BB%E6%84%8F%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%B7%BB%E5%8A%A0%E5%88%B0%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/"/>
+      <url>2018/03/15/Win%E7%B3%BB%E7%BB%9F%E5%B0%86%E4%BB%BB%E6%84%8F%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%B7%BB%E5%8A%A0%E5%88%B0%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<p>Win系统中，运行命令可以直接输入一些命令直接打开系统应用程序而不用找到其图标或者快捷方式所在位置，如运行gpedit.msc就可以直接打开注册表编辑器，运行calc就可以打开计算器等等，但是非系统程序想要运行只能找到应用图标才能打开，如果经常使用某个应用程序，但是桌面又有太多快捷图标，一时都找不到应用的图标，或者想直接用运行命令打开应用程序而不用鼠标双击应用，可以使用一种方法将应用程序添加到运行命令中，步骤：</p><ol><li>在C盘新建一个文件夹，可以任意命名，比如quickstar；</li><li>在环境变量-&gt;用户环境变量path设置中添加刚刚新建的文件夹所在目录；</li><li>只需将你想要添加应用程序的快捷方式复制到该目录下；</li><li>重命名快捷方式，如git重命名gt，火狐浏览器重命名hf；</li></ol><p>然后就可以直接运行gt，hf等直接打开git和火狐浏览器了，直接win+r键打开运行，输入命令，从此不用依靠鼠标打开应用程序了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Windows </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>模电复习1</title>
       <link href="2018/03/04/%E6%A8%A1%E7%94%B5%E5%A4%8D%E4%B9%A01/"/>
       <url>2018/03/04/%E6%A8%A1%E7%94%B5%E5%A4%8D%E4%B9%A01/</url>
