@@ -81,31 +81,6 @@
     
     
     <entry>
-      <title>VMware虚拟机安装黑苹果</title>
-      <link href="2019/10/27/VMware15%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85%E9%BB%91%E8%8B%B9%E6%9E%9C/"/>
-      <url>2019/10/27/VMware15%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85%E9%BB%91%E8%8B%B9%E6%9E%9C/</url>
-      
-        <content type="html"><![CDATA[<h2 id="准备"><a class="markdownIt-Anchor" href="#准备"></a> 准备</h2><p>以Vmware15为例:</p><ol><li>下载黑苹果镜像，地址：<a href="https://pan.baidu.com/s/17maORsJXqHmw0MXumBsNxQ">点击下载</a>，提取码e8qp；</li><li>安装Vmware15，步骤省略，<a href="https://www.vmware.com/cn/products/workstation-pro/workstation-pro-evaluation.html">VMware15官方下载</a>；</li><li>安装VMware的mac os系统补丁unlock，开源地址：<a href="https://github.com/DrDonk/unlocker.git">点击进入</a>，不会使用用git的，直接点release，下载源码解压，点win-install.cmd安装；</li></ol><h2 id="新建虚拟机"><a class="markdownIt-Anchor" href="#新建虚拟机"></a> 新建虚拟机</h2><ol><li><p>打开VMware15，新建虚拟机；</p></li><li><p>选择下载的镜像，注意右下角要选择所有文件，不然看不到镜像；</p></li><li><p>选择Apple Mac os x(M)，版本选择10.14（根据镜像版本选择）；</p></li><li><p>设置虚拟机名称，安装位置，配置等，设置好了点击完成；</p></li></ol><h2 id="开始安装"><a class="markdownIt-Anchor" href="#开始安装"></a> 开始安装</h2><ol><li><p>开启虚拟机，可能会出现无法获取VMCI驱动程序版本错误（一般家庭版系统会出现这样的错误，我用的企业版win10不会出现此错误），解决方法见下面问题处理</p></li><li><p>等待</p></li><li><p>进入系统安装界面，选择语言；</p></li><li><p>点磁盘工具，格式化磁盘，点抹除</p><p>名称随意，</p><p>格式日志式或者APFS都行，</p><p>方案选择GUI分区图,</p><p>完成后，选择安装macos</p></li><li><p>选择刚格式化的磁盘，安装系统</p></li><li><p>等待完成重启</p></li><li><p>安装好就能进入系统了，但此时可能不能全屏，解决办法见下面常见问题解决办法。</p></li></ol><h2 id="问题处理"><a class="markdownIt-Anchor" href="#问题处理"></a> 问题处理</h2><ol><li><p>虚拟机无法获取 vmci 驱动程序</p><p>解决方法：以文本方式虚拟机安装位置的*.vmx文件，将vmci0.present=&quot;TRUE“的TRUE改为false；</p></li><li><p>VMware不可恢复错误</p><p>解决方法：以文本方式虚拟机安装位置的*.vmx文件，在vmci0.present后添加一行vmci0.version = ”0“，注意等号前面有空格；</p></li><li><p>不能全屏的问题</p><p>解决方法：</p><ol><li><p>桌面有个光盘图标，鼠标右键选择推出；</p></li><li><p>下载Darwin，<a href="https://pan.baidu.com/s/1VWxpQT4G3ApZnwV7M1vuTg">下载地址</a>，提取码qfm1，设置虚拟机挂载该文件，重启虚拟机；</p></li><li><p>桌面会多了VMware tools图标，打开安装vmtools；</p></li><li><p>关闭虚拟机，设置该虚拟机显示器，选择指定显示器，设置分辨率位你电脑的最大分辨率。</p></li><li><p>开启虚拟机就能全屏了，如果不行，重装vmtools重启，多试几次。</p></li></ol></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> Windows </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 黑苹果 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Win10修改用户名及用户文件夹名</title>
       <link href="2018/08/03/Win10%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E5%90%8D%E5%8F%8A%E7%94%A8%E6%88%B7%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%8D/"/>
       <url>2018/08/03/Win10%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E5%90%8D%E5%8F%8A%E7%94%A8%E6%88%B7%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%8D/</url>
@@ -198,6 +173,31 @@
         <tags>
             
             <tag> 电子 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VMware虚拟机安装黑苹果</title>
+      <link href="2018/02/27/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85%E9%BB%91%E8%8B%B9%E6%9E%9C/"/>
+      <url>2018/02/27/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85%E9%BB%91%E8%8B%B9%E6%9E%9C/</url>
+      
+        <content type="html"><![CDATA[<h2 id="准备"><a class="markdownIt-Anchor" href="#准备"></a> 准备</h2><p>以Vmware15为例:</p><ol><li>下载黑苹果镜像，地址：<a href="https://pan.baidu.com/s/17maORsJXqHmw0MXumBsNxQ">点击下载</a>，提取码e8qp；</li><li>安装Vmware15，步骤省略，<a href="https://www.vmware.com/cn/products/workstation-pro/workstation-pro-evaluation.html">VMware15官方下载</a>；</li><li>安装VMware的mac os系统补丁unlock，开源地址：<a href="https://github.com/DrDonk/unlocker.git">点击进入</a>，不会使用用git的，直接点release，下载源码解压，点win-install.cmd安装；</li></ol><h2 id="新建虚拟机"><a class="markdownIt-Anchor" href="#新建虚拟机"></a> 新建虚拟机</h2><ol><li><p>打开VMware15，新建虚拟机；</p></li><li><p>选择下载的镜像，注意右下角要选择所有文件，不然看不到镜像；</p></li><li><p>选择Apple Mac os x(M)，版本选择10.14（根据镜像版本选择）；</p></li><li><p>设置虚拟机名称，安装位置，配置等，设置好了点击完成；</p></li></ol><h2 id="开始安装"><a class="markdownIt-Anchor" href="#开始安装"></a> 开始安装</h2><ol><li><p>开启虚拟机，可能会出现无法获取VMCI驱动程序版本错误（一般家庭版系统会出现这样的错误，我用的企业版win10不会出现此错误），解决方法见下面问题处理</p></li><li><p>等待</p></li><li><p>进入系统安装界面，选择语言；</p></li><li><p>点磁盘工具，格式化磁盘，点抹除</p><p>名称随意，</p><p>格式日志式或者APFS都行，</p><p>方案选择GUI分区图,</p><p>完成后，选择安装macos</p></li><li><p>选择刚格式化的磁盘，安装系统</p></li><li><p>等待完成重启</p></li><li><p>安装好就能进入系统了，但此时可能不能全屏，解决办法见下面常见问题解决办法。</p></li></ol><h2 id="问题处理"><a class="markdownIt-Anchor" href="#问题处理"></a> 问题处理</h2><ol><li><p>虚拟机无法获取 vmci 驱动程序</p><p>解决方法：以文本方式虚拟机安装位置的*.vmx文件，将vmci0.present=&quot;TRUE“的TRUE改为false；</p></li><li><p>VMware不可恢复错误</p><p>解决方法：以文本方式虚拟机安装位置的*.vmx文件，在vmci0.present后添加一行vmci0.version = ”0“，注意等号前面有空格；</p></li><li><p>不能全屏的问题</p><p>解决方法：</p><ol><li><p>桌面有个光盘图标，鼠标右键选择推出；</p></li><li><p>下载Darwin，<a href="https://pan.baidu.com/s/1VWxpQT4G3ApZnwV7M1vuTg">下载地址</a>，提取码qfm1，设置虚拟机挂载该文件，重启虚拟机；</p></li><li><p>桌面会多了VMware tools图标，打开安装vmtools；</p></li><li><p>关闭虚拟机，设置该虚拟机显示器，选择指定显示器，设置分辨率位你电脑的最大分辨率。</p></li><li><p>开启虚拟机就能全屏了，如果不行，重装vmtools重启，多试几次。</p></li></ol></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Windows </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 黑苹果 </tag>
             
         </tags>
       
