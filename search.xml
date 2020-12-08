@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>华硕UX433FN快速安装Win黑苹果双系统</title>
+      <link href="2020/09/03/%E5%8D%8E%E7%A1%95UX433FN%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85Win%E9%BB%91%E8%8B%B9%E6%9E%9C%E5%8F%8C%E7%B3%BB%E7%BB%9F/"/>
+      <url>2020/09/03/%E5%8D%8E%E7%A1%95UX433FN%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85Win%E9%BB%91%E8%8B%B9%E6%9E%9C%E5%8F%8C%E7%B3%BB%E7%BB%9F/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2><p>只针对本型号电脑，快速安装Win，黑苹果双系统，以下内容假设你已经安装可以用的Win系统，操作都在Win系统下进行。</p><h2 id="电脑配置"><a class="markdownIt-Anchor" href="#电脑配置"></a> 电脑配置</h2><p>型号：华硕UX433FN（U4300FN，灵耀U2）</p><p>CPU：i5-8265u</p><p>显卡：Intel® UHD Graphics 620（独显MX150用不了）</p><p>内存：8G</p><p>SSD:  512GB NVME</p><h2 id="测试正常的功能"><a class="markdownIt-Anchor" href="#测试正常的功能"></a> 测试正常的功能</h2><ol><li>显卡</li><li>声卡（没有声音，但是能控制输出设备音量，可以用蓝牙设备播放声音）</li><li>USB</li><li>Type-C</li><li>WIFI</li><li>键盘</li><li>触摸板</li><li>其他自行测试</li></ol><h2 id="测试不正常的功能"><a class="markdownIt-Anchor" href="#测试不正常的功能"></a> 测试不正常的功能</h2><ol><li>HDMI视频、音频输出</li><li>虚拟化</li><li>其他自行测试</li></ol><h2 id="efi"><a class="markdownIt-Anchor" href="#efi"></a> EFI</h2><p>使用OpenCore引导，GitHub地址：</p><p>克隆到本地，将BOOT文件夹的BOOTx64.efi改名BOOT1x64.efi，不然会覆盖原来系统的引导</p><h2 id="开始"><a class="markdownIt-Anchor" href="#开始"></a> 开始</h2><ol><li>下载黑苹果镜像，可以区黑果小兵下载，也可以其他地方下载；</li><li>制作启动盘，制作工具下载：<a href="https://www.balena.io/etcher/">etcher下载</a>；</li><li>分区：添加一个分区用来安装系统，直接从win系统的磁盘管理压缩和添加卷；</li><li>从启动盘启动，进入recovery，打开磁盘工具，选择格式化刚才加的分区为Apfs格式；</li><li>然后选择安装系统，选择刚刚格式化的分区进行安装；</li><li>安装完成重启进入Win系统，你也可以再从启动盘引导进入安装的黑苹果系统看一下安装的系统怎么样（可跳过此步）</li><li>在Win系统中，打开EasyUEFI，（<a href="https://pan.baidu.com/s/16o5YCie91bxoOjrFJdVjhg">下载地址</a>，提取码：85su），选择管理EFI系统分区-EFI系统分区资源管理器，将EFI文件上传到EFI分区；</li><li>返回EasyUEFI主窗口，打开管理EFI启动项，新建启动项，选择其他系统，描述随便输入，浏览文件找到上传的BOOT1x64.efi，完成后将添加的启动项移到最前面；</li><li>重启电脑，选择进入mac系统，OK</li></ol><h2 id="一些常见问题解决"><a class="markdownIt-Anchor" href="#一些常见问题解决"></a> 一些常见问题解决</h2><ol><li><p>即使是Root模式也无法移动和修改文件的问题：</p><ul><li><p>重启进入recovery，打开终端输入</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">csrutil disable</span><br></pre></td></tr></table></figure></li><li><p>重启系统</p></li></ul></li><li><p>Appstore无法登录id问题：</p><p>将com.apple.Boot.plist文件复制替换到</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Library/Preferences/SystemConfiguration</span><br></pre></td></tr></table></figure><p>该文件下载地址：<a href="https://pan.baidu.com/s/1JXaV8iHINyYWFCdXX0AWjg">com.apple.Boot.plist</a>，提取码：6cok</p></li><li><p>NTFS格式U盘硬盘只能读不能写的问题：下载安装Mounty软件，下载地址：<a href="https://pan.baidu.com/s/1p5yOWIOXQkh_frWY5ZBwWw">Mounty</a>，提取码：aijg</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Macos </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 黑苹果 </tag>
+            
+            <tag> Macos </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Windows to go</title>
       <link href="2020/05/12/Windows%20to%20go/"/>
       <url>2020/05/12/Windows%20to%20go/</url>
@@ -190,7 +217,7 @@
       
       <categories>
           
-          <category> Windows </category>
+          <category> Macos </category>
           
       </categories>
       
@@ -198,6 +225,8 @@
         <tags>
             
             <tag> 黑苹果 </tag>
+            
+            <tag> Macos </tag>
             
         </tags>
       
