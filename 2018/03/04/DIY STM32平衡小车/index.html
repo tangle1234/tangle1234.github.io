@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DIY STM32平衡小车 | Tangle</title><meta name="keywords" content="STM32"><meta name="author" content="Tangle"><meta name="copyright" content="Tangle"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="平衡车原理 先看一下成品是什么样子的 准备就做成这个样子的。 想象在电机不供电不动的情况下，将车放在地上下松手后，车子肯定会向前或向后倒，就像人站在一根细的杆子上，大脑不控制肯定是站不稳的，因为重心不在适当的点，人通过大脑完成调节，而平衡车调节靠STM32控制电机的转速，转向来使车平衡不倒。  材料购买 电机带编码器x2，建议直接购买底盘； 电池座，18650电池x3； 铜柱，螺丝，多买一些备用">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DIY STM32平衡小车 | Tangle</title><meta name="keywords" content="STM32"><meta name="author" content="Tangle"><meta name="copyright" content="Tangle"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="平衡车原理 先看一下成品是什么样子的  准备就做成这个样子的。 想象在电机不供电不动的情况下，将车放在地上下松手后，车子肯定会向前或向后倒，就像人站在一根细的杆子上，大脑不控制肯定是站不稳的，因为重心不在适当的点，人通过大脑完成调节，而平衡车调节靠STM32控制电机的转速，转向来使车平衡不倒。  材料购买 电机带编码器x2，一般直接购买底盘； 电池座，18650电池x3； M3铜柱、螺丝、螺母，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DIY STM32平衡小车">
 <meta property="og:url" content="https://letanga.github.io/2018/03/04/DIY%20STM32%E5%B9%B3%E8%A1%A1%E5%B0%8F%E8%BD%A6/index.html">
 <meta property="og:site_name" content="Tangle">
-<meta property="og:description" content="平衡车原理 先看一下成品是什么样子的 准备就做成这个样子的。 想象在电机不供电不动的情况下，将车放在地上下松手后，车子肯定会向前或向后倒，就像人站在一根细的杆子上，大脑不控制肯定是站不稳的，因为重心不在适当的点，人通过大脑完成调节，而平衡车调节靠STM32控制电机的转速，转向来使车平衡不倒。  材料购买 电机带编码器x2，建议直接购买底盘； 电池座，18650电池x3； 铜柱，螺丝，多买一些备用">
+<meta property="og:description" content="平衡车原理 先看一下成品是什么样子的  准备就做成这个样子的。 想象在电机不供电不动的情况下，将车放在地上下松手后，车子肯定会向前或向后倒，就像人站在一根细的杆子上，大脑不控制肯定是站不稳的，因为重心不在适当的点，人通过大脑完成调节，而平衡车调节靠STM32控制电机的转速，转向来使车平衡不倒。  材料购买 电机带编码器x2，一般直接购买底盘； 电池座，18650电池x3； M3铜柱、螺丝、螺母，">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s3.ax1x.com/2021/03/08/6lGgN8.jpg">
 <meta property="article:published_time" content="2018-03-04T02:16:10.000Z">
-<meta property="article:modified_time" content="2021-03-09T03:16:15.847Z">
+<meta property="article:modified_time" content="2021-03-09T11:59:04.919Z">
 <meta property="article:author" content="Tangle">
 <meta property="article:tag" content="STM32">
 <meta name="twitter:card" content="summary">
@@ -80,7 +80,7 @@ var saveToLocal = {
   isHome: false,
   isHighlightShrink: false,
   isSidebar: true,
-  postUpdate: '2021-03-09 11:16:15'
+  postUpdate: '2021-03-09 19:59:04'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -142,29 +142,272 @@ var saveToLocal = {
     if (t === 'dark') activateDarkMode()
     else if (t === 'light') activateLightMode()
   }
-})()</script><style type="text/css">#toggle-sidebar {bottom: 80px}</style><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://s1.ax1x.com/2020/05/01/Jje1fS.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">38</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">25</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B3%E8%A1%A1%E8%BD%A6%E5%8E%9F%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text"> 平衡车原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%90%E6%96%99%E8%B4%AD%E4%B9%B0"><span class="toc-number">2.</span> <span class="toc-text"> 材料购买</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E5%88%86%E6%9E%90%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.</span> <span class="toc-text"> 硬件分析设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%E5%9B%BE%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.1.</span> <span class="toc-text"> 原理图设计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%B5%E6%BA%90%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.1.1.</span> <span class="toc-text"> 电源设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#stm32%E6%9C%80%E5%B0%8F%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.1.2.</span> <span class="toc-text"> STM32最小系统设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mpu6050%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.1.3.</span> <span class="toc-text"> MPU6050模块设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.1.4.</span> <span class="toc-text"> 电机驱动模块设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%93%9D%E7%89%99%E6%A8%A1%E5%9D%9724g%E6%A8%A1%E5%9D%97"><span class="toc-number">3.1.5.</span> <span class="toc-text"> 蓝牙模块，2.4g模块</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pcb%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.2.</span> <span class="toc-text"> PCB设计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bom%E8%A1%A8%E6%95%B4%E7%90%86%E9%85%8D%E5%8D%95"><span class="toc-number">4.</span> <span class="toc-text"> BOM表整理配单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%99%A8%E4%BB%B6%E7%84%8A%E6%8E%A5"><span class="toc-number">5.</span> <span class="toc-text"> 器件焊接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1"><span class="toc-number">6.</span> <span class="toc-text"> 软件设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%B2%E7%BA%A7pid"><span class="toc-number">6.1.</span> <span class="toc-text"> 串级PID</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B6%E7%BA%A7pid"><span class="toc-number">6.2.</span> <span class="toc-text"> 并级PID</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pid%E8%B0%83%E5%8F%82"><span class="toc-number">7.</span> <span class="toc-text"> PID调参</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E8%93%9D%E7%89%99%E6%8E%A7%E5%88%B6%E6%96%B9%E5%90%91"><span class="toc-number">8.</span> <span class="toc-text"> 实现蓝牙控制方向</span></a></li></ol></div></div></div><header class="no-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Tangle</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav></header><main class="layout_post" id="content-inner"><article id="post"><div id="post-info"><div id="post-title"><div class="posttitle">DIY STM32平衡小车</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2018-03-04T02:16:10.000Z" title="undefined 2018-03-04 10:16:10">2018-03-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/STM32/">STM32</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">5.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>25分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div><div class="post-content" id="article-container"><h2 id="平衡车原理"><a class="markdownIt-Anchor" href="#平衡车原理"></a> 平衡车原理</h2>
+})()</script><style type="text/css">#toggle-sidebar {bottom: 80px}</style><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://s1.ax1x.com/2020/05/01/Jje1fS.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">39</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">27</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B3%E8%A1%A1%E8%BD%A6%E5%8E%9F%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text"> 平衡车原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%90%E6%96%99%E8%B4%AD%E4%B9%B0"><span class="toc-number">2.</span> <span class="toc-text"> 材料购买</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E5%88%86%E6%9E%90%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.</span> <span class="toc-text"> 硬件分析设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%E5%9B%BE%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.1.</span> <span class="toc-text"> 原理图设计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%B5%E6%BA%90%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.1.1.</span> <span class="toc-text"> 电源设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#stm32%E4%B8%BB%E6%8E%A7%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.1.2.</span> <span class="toc-text"> STM32主控设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mpu6050%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.1.3.</span> <span class="toc-text"> MPU6050模块设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.1.4.</span> <span class="toc-text"> 电机驱动模块设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%93%9D%E7%89%99%E6%A8%A1%E5%9D%97"><span class="toc-number">3.1.5.</span> <span class="toc-text"> 蓝牙模块</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pcb%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.2.</span> <span class="toc-text"> PCB设计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bom%E8%A1%A8%E6%95%B4%E7%90%86%E9%85%8D%E5%8D%95"><span class="toc-number">4.</span> <span class="toc-text"> BOM表整理配单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%99%A8%E4%BB%B6%E7%84%8A%E6%8E%A5"><span class="toc-number">5.</span> <span class="toc-text"> 器件焊接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1"><span class="toc-number">6.</span> <span class="toc-text"> 软件设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%B2%E7%BA%A7pid"><span class="toc-number">6.1.</span> <span class="toc-text"> 串级PID</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B6%E7%BA%A7pid"><span class="toc-number">6.2.</span> <span class="toc-text"> 并级PID</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pid%E8%B0%83%E5%8F%82"><span class="toc-number">7.</span> <span class="toc-text"> PID调参</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E8%93%9D%E7%89%99%E6%8E%A7%E5%88%B6%E6%96%B9%E5%90%91"><span class="toc-number">8.</span> <span class="toc-text"> 实现蓝牙控制方向</span></a></li></ol></div></div></div><header class="no-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Tangle</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav></header><main class="layout_post" id="content-inner"><article id="post"><div id="post-info"><div id="post-title"><div class="posttitle">DIY STM32平衡小车</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2018-03-04T02:16:10.000Z" title="undefined 2018-03-04 10:16:10">2018-03-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/STM32/">STM32</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>27分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div><div class="post-content" id="article-container"><h2 id="平衡车原理"><a class="markdownIt-Anchor" href="#平衡车原理"></a> 平衡车原理</h2>
 <p>先看一下成品是什么样子的</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/6lGgN8"><img src="https://s3.ax1x.com/2021/03/08/6lGgN8.jpg" alt="6lGgN8.jpg" /></a></p>
 <p>准备就做成这个样子的。</p>
 <p>想象在电机不供电不动的情况下，将车放在地上下松手后，车子肯定会向前或向后倒，就像人站在一根细的杆子上，大脑不控制肯定是站不稳的，因为重心不在适当的点，人通过大脑完成调节，而平衡车调节靠STM32控制电机的转速，转向来使车平衡不倒。</p>
 <h2 id="材料购买"><a class="markdownIt-Anchor" href="#材料购买"></a> 材料购买</h2>
-<p>电机带编码器x2，建议直接购买底盘；</p>
+<p>电机带编码器x2，一般直接购买底盘；</p>
 <p>电池座，18650电池x3；</p>
-<p>铜柱，螺丝，多买一些备用，容易弄丢；</p>
+<p>M3铜柱、螺丝、螺母，多买一些备用，容易弄丢；</p>
 <p>蓝牙模块；</p>
-<p>亚克力板可以直接购买成品，也可以定制，会CAD直接用CAD画，不会就用AD画，导出DXF格式，去某宝定制就可以；</p>
-<p>其他可能会用到的：2.4g模块，超声波模块，电机驱动模块，红外模块，MPU6050模块，STM32C8T6最小系统，MPU6050和STM32C8T6可以直接集成在板子上。</p>
-<p>所需电子器件等硬件设计再购买</p>
+<p>亚克力板可以直接购买成品，也可以定制，会CAD用CAD画，不会用AD画，导出DXF格式，去某宝定制；</p>
+<p>其他可能会用到的：2.4g模块，超声波模块，红外循迹模块，电机驱动模块，红外模块，MPU6050模块，STM32C8T6最小系统，MPU6050和STM32C8T6可以直接集成在板子上。</p>
+<p>所需电子器件等硬件设计完成再购买。</p>
 <h2 id="硬件分析设计"><a class="markdownIt-Anchor" href="#硬件分析设计"></a> 硬件分析设计</h2>
 <h3 id="原理图设计"><a class="markdownIt-Anchor" href="#原理图设计"></a> 原理图设计</h3>
 <h4 id="电源设计"><a class="markdownIt-Anchor" href="#电源设计"></a> 电源设计</h4>
 <p>因为使用3个18650电池串联，所以需要先降压，可以使用7805稳压芯片先降到5V，然后再通过AMS11173.3,将5V降到3.3v</p>
-<h4 id="stm32最小系统设计"><a class="markdownIt-Anchor" href="#stm32最小系统设计"></a> STM32最小系统设计</h4>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/68Fqkn"><img src="https://s3.ax1x.com/2021/03/09/68Fqkn.jpg" alt="68Fqkn.jpg" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/68Fx6U"><img src="https://s3.ax1x.com/2021/03/09/68Fx6U.jpg" alt="68Fx6U.jpg" /></a></p>
+<h4 id="stm32主控设计"><a class="markdownIt-Anchor" href="#stm32主控设计"></a> STM32主控设计</h4>
+<p>因为用不到RTC，所以省略37.768KHz的晶振，只用8M的高速外部晶振</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/68kpm4"><img src="https://s3.ax1x.com/2021/03/09/68kpm4.jpg" alt="68kpm4.jpg" /></a></p>
 <h4 id="mpu6050模块设计"><a class="markdownIt-Anchor" href="#mpu6050模块设计"></a> MPU6050模块设计</h4>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/68knne"><img src="https://s3.ax1x.com/2021/03/09/68knne.jpg" alt="68knne.jpg" /></a></p>
 <h4 id="电机驱动模块设计"><a class="markdownIt-Anchor" href="#电机驱动模块设计"></a> 电机驱动模块设计</h4>
-<h4 id="蓝牙模块24g模块"><a class="markdownIt-Anchor" href="#蓝牙模块24g模块"></a> 蓝牙模块，2.4g模块</h4>
-<p>蓝牙模块，2.4g模块使用购买的模块直插，所以只要添加对应管脚数的排母</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/68kG1f"><img src="https://s3.ax1x.com/2021/03/09/68kG1f.jpg" alt="68kG1f.jpg" /></a></p>
+<h4 id="蓝牙模块"><a class="markdownIt-Anchor" href="#蓝牙模块"></a> 蓝牙模块</h4>
+<p>蓝牙模块使用购买的模块直插，所以只要添加对应管脚数的排母</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/68kYjS"><img src="https://s3.ax1x.com/2021/03/09/68kYjS.jpg" alt="68kYjS.jpg" /></a></p>
 <h3 id="pcb设计"><a class="markdownIt-Anchor" href="#pcb设计"></a> PCB设计</h3>
+<p>TOP层：</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/68kXEd"><img src="https://s3.ax1x.com/2021/03/09/68kXEd.jpg" alt="68kXEd.jpg" /></a></p>
+<p>BOTTOM层：</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/68AAEj"><img src="https://s3.ax1x.com/2021/03/09/68AAEj.jpg" alt="68AAEj.jpg" /></a></p>
 <h2 id="bom表整理配单"><a class="markdownIt-Anchor" href="#bom表整理配单"></a> BOM表整理配单</h2>
+<table>
+<thead>
+<tr>
+<th>Comment</th>
+<th>Description</th>
+<th>Designator</th>
+<th>Footprint</th>
+<th>Value</th>
+<th>Quantity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cap2</td>
+<td>引线型铝电解电容</td>
+<td>C1, C2</td>
+<td>RADIAL,6X12MM</td>
+<td>16v,330uF</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Cap</td>
+<td>0603贴片电容</td>
+<td>C3, C6, C7, C9, C10,  C12, C13, C14, C16, C17, C18, C19, C20</td>
+<td>0603C</td>
+<td>100nF</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Cap2</td>
+<td>引线型铝电解电容</td>
+<td>C4, C5</td>
+<td>RADIAL,6X12MM</td>
+<td>10v,470uF</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Cap</td>
+<td>0603贴片电容</td>
+<td>C8</td>
+<td>0603C</td>
+<td>10nF</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Cap2</td>
+<td>引线型铝电解电容</td>
+<td>C11</td>
+<td>RADIAL,5X11MM</td>
+<td>10uF,25V</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Cap</td>
+<td>0603贴片电容</td>
+<td>C15</td>
+<td>0603C</td>
+<td>100pF</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Cap</td>
+<td>0603贴片电容</td>
+<td>C22, C24</td>
+<td>0603C</td>
+<td>22pF</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LED0</td>
+<td>Red、Blue</td>
+<td>D1, D2, D3, D4</td>
+<td>0603LED</td>
+<td></td>
+<td>4</td>
+</tr>
+<tr>
+<td>MF-NSMF050</td>
+<td>保险丝</td>
+<td>F1</td>
+<td>1206F</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>Header 20P</td>
+<td>20p排针</td>
+<td>H1, H2</td>
+<td>HDR1X20</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>CDS-2P</td>
+<td>2p电源插座</td>
+<td>J1</td>
+<td>CDS-2P</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>BLUE</td>
+<td>蓝牙模块</td>
+<td>J2</td>
+<td>BLUE</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>MSS22D18</td>
+<td>贴片6脚开关</td>
+<td>KG1</td>
+<td>MSS22D18</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>PH-6P</td>
+<td>PH2.0  6p插座</td>
+<td>M1, M2</td>
+<td>PH2.0 6P</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>Header 4</td>
+<td>4p排针</td>
+<td>P1</td>
+<td>HDR1X4</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>Header 3X2</td>
+<td>3x2p排针</td>
+<td>P2</td>
+<td>HDR2X3</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>Res2</td>
+<td>0603贴片电阻</td>
+<td>R1, R2, R4, R5, R6,  R9</td>
+<td>0603R</td>
+<td>10K</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Res2</td>
+<td>0603贴片电阻</td>
+<td>R3</td>
+<td>0603R</td>
+<td>3.3K</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Res2</td>
+<td>0603贴片电阻</td>
+<td>R7, R8</td>
+<td>0603R</td>
+<td>100K</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Res2</td>
+<td>0603贴片电阻</td>
+<td>R10, R11</td>
+<td>0603R</td>
+<td>680R</td>
+<td>2</td>
+</tr>
+<tr>
+<td>SW1</td>
+<td>轻触按键开关</td>
+<td>S2</td>
+<td>KEY_4(SOP)</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>78M05</td>
+<td>DCDC芯片</td>
+<td>U1</td>
+<td>TO-252-2-180</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>MPU-6050</td>
+<td>六轴传感器</td>
+<td>U2</td>
+<td>QFN-24_4x4x05P</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>TB6612FNG</td>
+<td>电机驱动芯片</td>
+<td>U3</td>
+<td>LC-SSOP-24_208mil</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>STM32F103C8</td>
+<td>STM32 MCU</td>
+<td>U4</td>
+<td>LQFP-48_7x7x05P</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>AMS1117-3.3</td>
+<td>低压差线性稳压(LDO)</td>
+<td>VR1</td>
+<td>SOT-23(SOT-23-3)</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>XTAL</td>
+<td>直插式晶振HC-49S</td>
+<td>Y2</td>
+<td>XTAL_US</td>
+<td>8M</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>拿着上面BOM表就可以配单了</p>
 <h2 id="器件焊接"><a class="markdownIt-Anchor" href="#器件焊接"></a> 器件焊接</h2>
 <h2 id="软件设计"><a class="markdownIt-Anchor" href="#软件设计"></a> 软件设计</h2>
 <p>先实现基本的直立控制，再实现通过上位机，遥控等方式控制小车行驶，因为控制小车的基础是基本的直立。两种PID控制方法，串级和并级，关于串并PID可以参考<a href="">这里</a>，两种PID参数是完全不相同的，需要分别调参。</p>
