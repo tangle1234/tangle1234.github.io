@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tangle</title><meta name="author" content="Tangle"><meta name="copyright" content="Tangle"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta property="og:type" content="website">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tangle</title><meta name="author" content="Tangle"><meta name="copyright" content="Tangle"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Tangle">
 <meta property="og:url" content="https://letanga.github.io/page/2/index.html">
 <meta property="og:site_name" content="Tangle">
@@ -6,14 +6,13 @@
 <meta property="og:image" content="https://s1.ax1x.com/2020/05/01/Jje1fS.jpg">
 <meta property="article:author" content="Tangle">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s1.ax1x.com/2020/05/01/Jje1fS.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://letanga.github.io/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><script>var GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/05/01/Jje1fS.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://letanga.github.io/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
-  hexoversion: '5.2.0',
   algolia: undefined,
   localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
   translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
   noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
   copy: {
     success: '复制成功',
     error: '复制错误',
@@ -32,50 +31,29 @@
     month: '个月前'
   },
   copyright: undefined,
-  ClickShowText: undefined,
   lightbox: 'fancybox',
   Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
-  justifiedGallery: {
-    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
   },
   isPhotoFigcaption: false,
   islazyload: false,
   isanchor: false
-};
-
-var saveToLocal = {
-  set: function setWithExpiry(key, value, ttl) {
-    const now = new Date()
-    const expiryDay = ttl * 86400000
-    const item = {
-      value: value,
-      expiry: now.getTime() + expiryDay,
-    }
-    localStorage.setItem(key, JSON.stringify(item))
-  },
-
-  get: function getWithExpiry(key) {
-    const itemStr = localStorage.getItem(key)
-
-    if (!itemStr) {
-      return undefined
-    }
-    const item = JSON.parse(itemStr)
-    const now = new Date()
-
-    if (now.getTime() > item.expiry) {
-      localStorage.removeItem(key)
-      return undefined
-    }
-    return item.value
-  }
-}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Tangle',
   isPost: false,
   isHome: true,
   isHighlightShrink: false,
-  isSidebar: false,
-  postUpdate: '2021-03-17 22:17:27'
+  isToc: false,
+  postUpdate: '2021-05-26 00:40:01'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -88,56 +66,76 @@ var saveToLocal = {
   #post-meta time {
     display: inline !important
   }
-</style></noscript><script>(function () {
-  window.activateDarkMode = function () {
-    document.documentElement.setAttribute('data-theme', 'dark')
-    if (document.querySelector('meta[name="theme-color"]') !== null) {
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-    }
-  }
-  window.activateLightMode = function () {
-    document.documentElement.setAttribute('data-theme', 'light')
-    if (document.querySelector('meta[name="theme-color"]') !== null) {
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-    }
-  }
-
-  const autoChangeMode = 'false'
-  const t = saveToLocal.get('theme')
-  if (autoChangeMode === '1') {
-    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
-    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
-    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
-
-    if (t === undefined) {
-      if (isLightMode) activateLightMode()
-      else if (isDarkMode) activateDarkMode()
-      else if (isNotSpecified || hasNoSupport) {
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
         const now = new Date()
-        const hour = now.getHours()
-        const isNight = hour <= 6 || hour >= 18
-        isNight ? activateDarkMode() : activateLightMode()
-      }
-      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
-        if (saveToLocal.get('theme') === undefined) {
-          e.matches ? activateDarkMode() : activateLightMode()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
         }
-      })
-    } else if (t === 'light') activateLightMode()
-    else activateDarkMode()
-  } else if (autoChangeMode === '2') {
-    const now = new Date()
-    const hour = now.getHours()
-    const isNight = hour <= 6 || hour >= 18
-    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
-    else if (t === 'light') activateLightMode()
-    else activateDarkMode()
-  } else {
-    if (t === 'dark') activateDarkMode()
-    else if (t === 'light') activateLightMode()
-  }
-})()</script><style type="text/css">#toggle-sidebar {bottom: 80px}</style><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://s1.ax1x.com/2020/05/01/Jje1fS.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">39</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">27</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://s3.ax1x.com/2020/12/20/rdtNkT.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Tangle</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">Tangle</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/letanga" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:247022864@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://blog.csdn.net/lemea" target="_blank" title="CSDN博客"><i class="fas fa-blog"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2017/12/20/%E6%A8%A1%E7%94%B5%E5%A4%8D%E4%B9%A02/" title="模电复习2">     <img class="post_bg" src="https://s1.ax1x.com/2020/09/30/0KC8L6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="模电复习2"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/12/20/%E6%A8%A1%E7%94%B5%E5%A4%8D%E4%B9%A02/" title="模电复习2">模电复习2</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-12-20T07:29:22.000Z" title="发表于 2017-12-20 15:29:22">2017-12-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/">电子技术基础</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%94%B5%E5%AD%90/">电子</a></span></div><div class="content"> 17-04 集成运放简介
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><style type="text/css">#toggle-sidebar {bottom: 80px}</style><meta name="generator" content="Hexo 5.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="wizard-scene"><div class="wizard-objects"><div class="wizard-square"></div><div class="wizard-circle"></div><div class="wizard-triangle"></div></div><div class="wizard"><div class="wizard-body"></div><div class="wizard-right-arm"><div class="wizard-right-hand"></div></div><div class="wizard-left-arm"><div class="wizard-left-hand"></div></div><div class="wizard-head"><div class="wizard-beard"></div><div class="wizard-face"><div class="wizard-adds"></div></div><div class="wizard-hat"><div class="wizard-hat-of-the-hat"></div><div class="wizard-four-point-star --first"></div><div class="wizard-four-point-star --second"></div><div class="wizard-four-point-star --third"></div></div></div></div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://s1.ax1x.com/2020/05/01/Jje1fS.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">39</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://s3.ax1x.com/2020/12/20/rdtNkT.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Tangle</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Tangle</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/letanga" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:247022864@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://blog.csdn.net/lemea" target="_blank" title="CSDN博客"><i class="fas fa-blog"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2017/12/20/%E6%A8%A1%E7%94%B5%E5%A4%8D%E4%B9%A02/" title="模电复习2">     <img class="post_bg" src="https://s1.ax1x.com/2020/09/30/0KC8L6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="模电复习2"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/12/20/%E6%A8%A1%E7%94%B5%E5%A4%8D%E4%B9%A02/" title="模电复习2">模电复习2</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-12-20T07:29:22.000Z" title="发表于 2017-12-20 15:29:22">2017-12-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/">电子技术基础</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%94%B5%E5%AD%90/">电子</a></span></div><div class="content"> 17-04 集成运放简介
 
 
 在半导体制造工艺的基础上，将整个电路中的元器件及电路制作在一块硅基片上，构成特定功能的电子电路，称为集成电路
@@ -194,7 +192,7 @@ var saveToLocal = {
 特点：
 
 输出电阻小
-电压 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2017/12/14/C++%E5%9B%9B%E7%A7%8D%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/" title="C++四种变量命名规范">     <img class="post_bg" src="https://s3.ax1x.com/2020/12/03/D7D5U1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++四种变量命名规范"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/12/14/C++%E5%9B%9B%E7%A7%8D%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/" title="C++四种变量命名规范">C++四种变量命名规范</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-12-14T10:45:31.000Z" title="发表于 2017-12-14 18:45:31">2017-12-14</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/C-C/">C/C++</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/C-C/">C/C++</a></span></div><div class="content">
+电压 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2017/12/14/C++%E5%9B%9B%E7%A7%8D%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/" title="C++四种变量命名规范">     <img class="post_bg" src="https://s3.ax1x.com/2020/12/03/D7D5U1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++四种变量命名规范"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/12/14/C++%E5%9B%9B%E7%A7%8D%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/" title="C++四种变量命名规范">C++四种变量命名规范</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-12-14T10:45:31.000Z" title="发表于 2017-12-14 18:45:31">2017-12-14</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/C-C/">C/C++</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/C-C/">C/C++</a></span></div><div class="content">
 
 大驼峰法(帕斯卡命名法)：所有单词首字母大写
 123int MyAge;char MyName[10];float ManHeight;
@@ -209,7 +207,7 @@ var saveToLocal = {
 属性部分：
 1234g_ 全局变量c_ 　常量m_ 　c++类成员变量s_ 　静态变量
 类型部分：
-12345678910111213141516171819数组 a指针　p函数　fn无效　v句柄　h长整型　l布尔　b浮点型（有 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2017/12/13/C++%E5%A4%8D%E4%B9%A0/" title="C++复习">     <img class="post_bg" src="https://s3.ax1x.com/2020/12/02/D5WE7j.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++复习"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/12/13/C++%E5%A4%8D%E4%B9%A0/" title="C++复习">C++复习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-12-13T12:22:31.000Z" title="发表于 2017-12-13 20:22:31">2017-12-13</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/C-C/">C/C++</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/C-C/">C/C++</a></span></div><div class="content">
+12345678910111213141516171819数组 a指针　p函数　fn无效　v句柄　h长整型　l布尔　b浮点型（有 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2017/12/13/C++%E5%A4%8D%E4%B9%A0/" title="C++复习">     <img class="post_bg" src="https://s3.ax1x.com/2020/12/02/D5WE7j.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++复习"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/12/13/C++%E5%A4%8D%E4%B9%A0/" title="C++复习">C++复习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-12-13T12:22:31.000Z" title="发表于 2017-12-13 20:22:31">2017-12-13</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/C-C/">C/C++</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/C-C/">C/C++</a></span></div><div class="content">
 
 C中的命名空间：在C语言中只有一个全局作用域，C语言中所有的全局标识符共享同一个作用域，标识符之间可能发生冲突 ；
 
@@ -238,7 +236,7 @@ C++  命名空间的使用：
 C语言中无法取得register变量地址，在C++  中依然支持register关键字，C++  编译器有自己的优化方式，不使用register也可能做优化，C++ 中可以取得register变量的地址，C++ 编译器发现程序中需要取register变量的地址时，register对变量的声明变得无效；
 
 
-C语言的struct定义 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2017/12/04/%E6%A8%A1%E7%94%B5%E5%A4%8D%E4%B9%A01/" title="模电复习1">     <img class="post_bg" src="https://s1.ax1x.com/2020/09/30/0KC8L6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="模电复习1"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/12/04/%E6%A8%A1%E7%94%B5%E5%A4%8D%E4%B9%A01/" title="模电复习1">模电复习1</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-12-04T06:26:16.000Z" title="发表于 2017-12-04 14:26:16">2017-12-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/">电子技术基础</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%94%B5%E5%AD%90/">电子</a></span></div><div class="content"> 00-01 绪论
+C语言的struct定义 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2017/12/04/%E6%A8%A1%E7%94%B5%E5%A4%8D%E4%B9%A01/" title="模电复习1">     <img class="post_bg" src="https://s1.ax1x.com/2020/09/30/0KC8L6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="模电复习1"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/12/04/%E6%A8%A1%E7%94%B5%E5%A4%8D%E4%B9%A01/" title="模电复习1">模电复习1</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-12-04T06:26:16.000Z" title="发表于 2017-12-04 14:26:16">2017-12-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/">电子技术基础</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%94%B5%E5%AD%90/">电子</a></span></div><div class="content"> 00-01 绪论
 
 为什么要学模电？学什么？怎么学？
 电子技术是研究电子器件、电子电路及其应用的科学技术
@@ -271,7 +269,7 @@ C语言的struct定义 ...</div></div></div><div class="recent-post-item"><div c
  01-03 PN结
 
 空间电荷区的概念及形成（耗尽层，势垒区）
-内电场的概念，内电场阻碍多子运动，少子在内电场的作用下运动，称为漂移运 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2017/10/15/%E9%9D%99%E6%80%81%E5%BA%93%E3%80%81%E5%8A%A8%E6%80%81%E5%BA%93%E3%80%81%E5%85%B1%E4%BA%AB%E5%BA%93/" title="静态库、动态库、共享库">     <img class="post_bg" src="https://s3.ax1x.com/2020/11/19/DKEkkR.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="静态库、动态库、共享库"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/10/15/%E9%9D%99%E6%80%81%E5%BA%93%E3%80%81%E5%8A%A8%E6%80%81%E5%BA%93%E3%80%81%E5%85%B1%E4%BA%AB%E5%BA%93/" title="静态库、动态库、共享库">静态库、动态库、共享库</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-10-15T12:11:30.000Z" title="发表于 2017-10-15 20:11:30">2017-10-15</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/C-C/">C/C++</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E9%9D%99%E6%80%81%E5%BA%93/">静态库</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%8A%A8%E6%80%81%E5%BA%93/">动态库</a></span></div><div class="content">在使用C/C++编程的时候，我们通常使用.h和.cpp的方式来书写我们的代码，可这存在一个问题：当我们需要将写好的功能分享给别人时候的时候，如果同时把.h和.cpp交给别人势必会造成我们的代码泄漏，静态库和动态库很好地解决了这个问题，即：可以将写好的功能分享给他人，又可以将关键部分代码隐藏。
+内电场的概念，内电场阻碍多子运动，少子在内电场的作用下运动，称为漂移运 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2017/10/15/%E9%9D%99%E6%80%81%E5%BA%93%E3%80%81%E5%8A%A8%E6%80%81%E5%BA%93%E3%80%81%E5%85%B1%E4%BA%AB%E5%BA%93/" title="静态库、动态库、共享库">     <img class="post_bg" src="https://s3.ax1x.com/2020/11/19/DKEkkR.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="静态库、动态库、共享库"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/10/15/%E9%9D%99%E6%80%81%E5%BA%93%E3%80%81%E5%8A%A8%E6%80%81%E5%BA%93%E3%80%81%E5%85%B1%E4%BA%AB%E5%BA%93/" title="静态库、动态库、共享库">静态库、动态库、共享库</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-10-15T12:11:30.000Z" title="发表于 2017-10-15 20:11:30">2017-10-15</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/C-C/">C/C++</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E9%9D%99%E6%80%81%E5%BA%93/">静态库</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%8A%A8%E6%80%81%E5%BA%93/">动态库</a></span></div><div class="content">在使用C/C++编程的时候，我们通常使用.h和.cpp的方式来书写我们的代码，可这存在一个问题：当我们需要将写好的功能分享给别人时候的时候，如果同时把.h和.cpp交给别人势必会造成我们的代码泄漏，静态库和动态库很好地解决了这个问题，即：可以将写好的功能分享给他人，又可以将关键部分代码隐藏。
  静态库
  Win
  生成静态库
@@ -310,14 +308,14 @@ C语言的struct定义 ...</div></div></div><div class="recent-post-item"><div c
  使用静态库
 
 
- ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2017/10/12/Win10%E5%AE%B6%E5%BA%AD%E7%89%88%E5%90%AF%E7%94%A8%E7%BB%84%E7%AD%96%E7%95%A5gpedit/" title="Win10家庭版启用组策略gpedit">     <img class="post_bg" src="https://s2.ax1x.com/2020/01/17/1SnoL9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Win10家庭版启用组策略gpedit"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/10/12/Win10%E5%AE%B6%E5%BA%AD%E7%89%88%E5%90%AF%E7%94%A8%E7%BB%84%E7%AD%96%E7%95%A5gpedit/" title="Win10家庭版启用组策略gpedit">Win10家庭版启用组策略gpedit</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-10-12T11:22:31.000Z" title="发表于 2017-10-12 19:22:31">2017-10-12</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Windows/">Windows</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/Windows/">Windows</a></span></div><div class="content">
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2017/10/12/Win10%E5%AE%B6%E5%BA%AD%E7%89%88%E5%90%AF%E7%94%A8%E7%BB%84%E7%AD%96%E7%95%A5gpedit/" title="Win10家庭版启用组策略gpedit">     <img class="post_bg" src="https://s2.ax1x.com/2020/01/17/1SnoL9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Win10家庭版启用组策略gpedit"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/10/12/Win10%E5%AE%B6%E5%BA%AD%E7%89%88%E5%90%AF%E7%94%A8%E7%BB%84%E7%AD%96%E7%95%A5gpedit/" title="Win10家庭版启用组策略gpedit">Win10家庭版启用组策略gpedit</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-10-12T11:22:31.000Z" title="发表于 2017-10-12 19:22:31">2017-10-12</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Windows/">Windows</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Windows/">Windows</a></span></div><div class="content">
 新建文本文件；
 编辑文本内容:
 
 123456@echo off　　pushd &quot;%~dp0&quot;　　dir /b %systemroot%\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;gp.txt　　dir /b  %systemroot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;gp.txt　　for /f %%i in (&#x27;findstr /i . gp.txt 2^&gt;nul&#x27;) do dism /online /norestart /add-package:&quot;%systemroot%\servicing\Packages\%%i&quot;　　pause
 3.另存为gpedit.bat ；
 4.以管理员身份运行，等待完成。
-</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2017/10/10/C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0/" title="C语言复习">     <img class="post_bg" src="https://s3.ax1x.com/2020/11/19/DKEkkR.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C语言复习"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/10/10/C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0/" title="C语言复习">C语言复习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-10-10T13:22:31.000Z" title="发表于 2017-10-10 21:22:31">2017-10-10</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/C-C/">C/C++</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/C-C/">C/C++</a></span></div><div class="content">
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2017/10/10/C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0/" title="C语言复习">     <img class="post_bg" src="https://s3.ax1x.com/2020/11/19/DKEkkR.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C语言复习"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/10/10/C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0/" title="C语言复习">C语言复习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-10-10T13:22:31.000Z" title="发表于 2017-10-10 21:22:31">2017-10-10</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/C-C/">C/C++</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/C-C/">C/C++</a></span></div><div class="content">
 
 B/S模型：浏览器/服务器模型；
 
@@ -326,7 +324,7 @@ C/S模型：客户端/服务器模型；
 
 
 冒泡排序第一种写法：
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869//全部在主函数里的形式#include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;int main()&#123;	int a[] = &#123; 6,4,8,9,4,7 &#125;;	int i = 0;	int j = 1;	int tmp = 0;	int len = sizeof(a) / sizeof(int);	for (i = 0; i &lt; len-1; i++)	&#123;		for (j = 0; j &lt; len-1-i; j++)		&#123;			if (a[j] &lt; a[j+1])			&#123;				tmp = a[j];				a[j] ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2017/10/06/TTL%E4%B8%8ECMOS%E7%94%B5%E5%B9%B3/" title="TTL与CMOS电平">     <img class="post_bg" src="https://s3.ax1x.com/2021/03/09/636vMn.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TTL与CMOS电平"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/10/06/TTL%E4%B8%8ECMOS%E7%94%B5%E5%B9%B3/" title="TTL与CMOS电平">TTL与CMOS电平</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-10-06T09:30:18.000Z" title="发表于 2017-10-06 17:30:18">2017-10-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/">电子技术基础</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%94%B5%E5%AD%90/">电子</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/TTL/">TTL</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/CMOS/">CMOS</a></span></div><div class="content">TTL与CMOS电平是集成电路常用的电平，应用时需要根据电平规范进行匹配与转换。
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869//全部在主函数里的形式#include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;int main()&#123;	int a[] = &#123; 6,4,8,9,4,7 &#125;;	int i = 0;	int j = 1;	int tmp = 0;	int len = sizeof(a) / sizeof(int);	for (i = 0; i &lt; len-1; i++)	&#123;		for (j = 0; j &lt; len-1-i; j++)		&#123;			if (a[j] &lt; a[j+1])			&#123;				tmp = a[j];				a[j] ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2017/10/06/TTL%E4%B8%8ECMOS%E7%94%B5%E5%B9%B3/" title="TTL与CMOS电平">     <img class="post_bg" src="https://s3.ax1x.com/2021/03/09/636vMn.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="TTL与CMOS电平"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/10/06/TTL%E4%B8%8ECMOS%E7%94%B5%E5%B9%B3/" title="TTL与CMOS电平">TTL与CMOS电平</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-10-06T09:30:18.000Z" title="发表于 2017-10-06 17:30:18">2017-10-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/">电子技术基础</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%94%B5%E5%AD%90/">电子</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/TTL/">TTL</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/CMOS/">CMOS</a></span></div><div class="content">TTL与CMOS电平是集成电路常用的电平，应用时需要根据电平规范进行匹配与转换。
  电平规范
 1、名称解释
 UohU_{oh}Uoh​ -&gt; 输出高电平，UolU_{ol}Uol​ -&gt; 输出低电平；
@@ -342,7 +340,7 @@ CMOS集成电路主要由MOS管构成，如STM32单片机，电平规范如下�
  应用说明
 1、3.3V/5V TTL 驱动 3.3V CMOS
 可以直接驱动。
-2、3.3V/5V TTL 驱动  ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2017/10/06/%E4%BA%8C%E6%9E%81%E7%AE%A1%E5%88%86%E7%B1%BB%E5%8F%8A%E5%BA%94%E7%94%A8/" title="二极管分类及应用">     <img class="post_bg" src="https://s3.ax1x.com/2021/03/08/6l1O9H.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="二极管分类及应用"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/10/06/%E4%BA%8C%E6%9E%81%E7%AE%A1%E5%88%86%E7%B1%BB%E5%8F%8A%E5%BA%94%E7%94%A8/" title="二极管分类及应用">二极管分类及应用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-10-06T07:20:12.000Z" title="发表于 2017-10-06 15:20:12">2017-10-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/">电子技术基础</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%94%B5%E5%AD%90/">电子</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E4%BA%8C%E6%9E%81%E7%AE%A1/">二极管</a></span></div><div class="content"> 常用二极管种类
+2、3.3V/5V TTL 驱动  ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2017/10/06/%E4%BA%8C%E6%9E%81%E7%AE%A1%E5%88%86%E7%B1%BB%E5%8F%8A%E5%BA%94%E7%94%A8/" title="二极管分类及应用">     <img class="post_bg" src="https://s3.ax1x.com/2021/03/08/6l1O9H.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="二极管分类及应用"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/10/06/%E4%BA%8C%E6%9E%81%E7%AE%A1%E5%88%86%E7%B1%BB%E5%8F%8A%E5%BA%94%E7%94%A8/" title="二极管分类及应用">二极管分类及应用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-10-06T07:20:12.000Z" title="发表于 2017-10-06 15:20:12">2017-10-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/">电子技术基础</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%94%B5%E5%AD%90/">电子</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E4%BA%8C%E6%9E%81%E7%AE%A1/">二极管</a></span></div><div class="content"> 常用二极管种类
 常规设计中，用的比较多的二极管有普通二极管、肖特基二极管、稳压管与TVS管；此外，还有快恢复二极管、超快恢复二极管、发光二极管、红外二极管等。
  普通二极管
 特点:单向导通；
@@ -358,7 +356,7 @@ CMOS集成电路主要由MOS管构成，如STM32单片机，电平规范如下�
 特点:反向击穿稳压；
 优点:体积小，价格便宜；
 缺点:带载能力弱，通常需要电阻限流；
-应用:以LM3Z7V5T1G为例，稳压值 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2017/10/04/%E7%94%B5%E9%98%BB%E7%94%B5%E5%AE%B9%E7%94%B5%E6%84%9F%E9%80%89%E5%9E%8B/" title="电阻电容电感选型">     <img class="post_bg" src="https://s3.ax1x.com/2021/03/01/6ieMFI.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="电阻电容电感选型"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/10/04/%E7%94%B5%E9%98%BB%E7%94%B5%E5%AE%B9%E7%94%B5%E6%84%9F%E9%80%89%E5%9E%8B/" title="电阻电容电感选型">电阻电容电感选型</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-10-04T06:26:16.000Z" title="发表于 2017-10-04 14:26:16">2017-10-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/">电子技术基础</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%94%B5%E5%AD%90/">电子</a></span></div><div class="content"> 电阻
+应用:以LM3Z7V5T1G为例，稳压值 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2017/10/04/%E7%94%B5%E9%98%BB%E7%94%B5%E5%AE%B9%E7%94%B5%E6%84%9F%E9%80%89%E5%9E%8B/" title="电阻电容电感选型">     <img class="post_bg" src="https://s3.ax1x.com/2021/03/01/6ieMFI.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="电阻电容电感选型"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/10/04/%E7%94%B5%E9%98%BB%E7%94%B5%E5%AE%B9%E7%94%B5%E6%84%9F%E9%80%89%E5%9E%8B/" title="电阻电容电感选型">电阻电容电感选型</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-10-04T06:26:16.000Z" title="发表于 2017-10-04 14:26:16">2017-10-04</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/">电子技术基础</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%94%B5%E5%AD%90/">电子</a></span></div><div class="content"> 电阻
  选型依据
 
 阻值:电阻值;
@@ -380,13 +378,28 @@ CMOS集成电路主要由MOS管构成，如STM32单片机，电平规范如下�
  选型依据
 
 容值:电容值;
-电容类型:陶瓷电容 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://s1.ax1x.com/2020/05/01/Jje1fS.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Tangle</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length_num">39</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length_num">27</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length_num">9</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/letanga"><i class="fab fa-github"></i><span>关注 Follow</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/letanga" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:247022864@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://blog.csdn.net/lemea" target="_blank" title="CSDN博客"><i class="fas fa-blog"></i></a></div></div></div><div class="sticky_layout"><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">这是我的个人博客<br>如果IE或其他浏览器显示混乱需要更换浏览器</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/01/04/DIY%20STM32F103ZET6%E5%BC%80%E5%8F%91%E6%9D%BF/" title="DIY STM32F103ZET6开发板"><img src="https://s3.ax1x.com/2021/03/08/6lU0m9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DIY STM32F103ZET6开发板"/></a><div class="content"><a class="title" href="/2021/01/04/DIY%20STM32F103ZET6%E5%BC%80%E5%8F%91%E6%9D%BF/" title="DIY STM32F103ZET6开发板">DIY STM32F103ZET6开发板</a><time datetime="2021-01-04T07:33:19.000Z" title="发表于 2021-01-04 15:33:19">2021-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/03/%E5%8D%8E%E7%A1%95UX433FN%E5%AE%89%E8%A3%85Win%E9%BB%91%E8%8B%B9%E6%9E%9C%E5%8F%8C%E7%B3%BB%E7%BB%9F/" title="华硕UX433FN安装Win黑苹果双系统"><img src="https://s3.ax1x.com/2020/12/08/rpaaYF.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="华硕UX433FN安装Win黑苹果双系统"/></a><div class="content"><a class="title" href="/2020/09/03/%E5%8D%8E%E7%A1%95UX433FN%E5%AE%89%E8%A3%85Win%E9%BB%91%E8%8B%B9%E6%9E%9C%E5%8F%8C%E7%B3%BB%E7%BB%9F/" title="华硕UX433FN安装Win黑苹果双系统">华硕UX433FN安装Win黑苹果双系统</a><time datetime="2020-09-03T06:09:17.000Z" title="发表于 2020-09-03 14:09:17">2020-09-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/05/12/Windows%20to%20go/" title="Windows to go"><img src="https://s1.ax1x.com/2020/10/09/0DpUIK.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Windows to go"/></a><div class="content"><a class="title" href="/2020/05/12/Windows%20to%20go/" title="Windows to go">Windows to go</a><time datetime="2020-05-12T11:26:13.000Z" title="发表于 2020-05-12 19:26:13">2020-05-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/04/12/Excel%E7%94%9F%E6%88%90CSV%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/" title="Excel生成CSV格式文件"><img src="https://s1.ax1x.com/2020/10/26/BKSKvF.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Excel生成CSV格式文件"/></a><div class="content"><a class="title" href="/2020/04/12/Excel%E7%94%9F%E6%88%90CSV%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/" title="Excel生成CSV格式文件">Excel生成CSV格式文件</a><time datetime="2020-04-12T10:36:13.000Z" title="发表于 2020-04-12 18:36:13">2020-04-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2018/11/03/DNS%E6%B1%A1%E6%9F%93%E9%97%AE%E9%A2%98/" title="DNS污染问题"><img src="https://s1.ax1x.com/2020/10/01/0K4kIU.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DNS污染问题"/></a><div class="content"><a class="title" href="/2018/11/03/DNS%E6%B1%A1%E6%9F%93%E9%97%AE%E9%A2%98/" title="DNS污染问题">DNS污染问题</a><time datetime="2018-11-03T10:12:30.000Z" title="发表于 2018-11-03 18:12:30">2018-11-03</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
+电容类型:陶瓷电容 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://s1.ax1x.com/2020/05/01/Jje1fS.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Tangle</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">39</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/letanga"><i class="fab fa-github"></i><span>关注 Follow</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/letanga" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:247022864@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://blog.csdn.net/lemea" target="_blank" title="CSDN博客"><i class="fas fa-blog"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">这是我的个人博客<br>如果IE或其他浏览器显示混乱需要更换浏览器</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/01/04/DIY%20STM32F103ZET6%E5%BC%80%E5%8F%91%E6%9D%BF/" title="DIY STM32F103ZET6开发板"><img src="https://s3.ax1x.com/2021/03/08/6lU0m9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DIY STM32F103ZET6开发板"/></a><div class="content"><a class="title" href="/2021/01/04/DIY%20STM32F103ZET6%E5%BC%80%E5%8F%91%E6%9D%BF/" title="DIY STM32F103ZET6开发板">DIY STM32F103ZET6开发板</a><time datetime="2021-01-04T07:33:19.000Z" title="发表于 2021-01-04 15:33:19">2021-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/03/%E5%8D%8E%E7%A1%95UX433FN%E5%AE%89%E8%A3%85Win%E9%BB%91%E8%8B%B9%E6%9E%9C%E5%8F%8C%E7%B3%BB%E7%BB%9F/" title="华硕UX433FN安装Win黑苹果双系统"><img src="https://s3.ax1x.com/2020/12/08/rpaaYF.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="华硕UX433FN安装Win黑苹果双系统"/></a><div class="content"><a class="title" href="/2020/09/03/%E5%8D%8E%E7%A1%95UX433FN%E5%AE%89%E8%A3%85Win%E9%BB%91%E8%8B%B9%E6%9E%9C%E5%8F%8C%E7%B3%BB%E7%BB%9F/" title="华硕UX433FN安装Win黑苹果双系统">华硕UX433FN安装Win黑苹果双系统</a><time datetime="2020-09-03T06:09:17.000Z" title="发表于 2020-09-03 14:09:17">2020-09-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/05/12/Windows%20to%20go/" title="Windows to go"><img src="https://s1.ax1x.com/2020/10/09/0DpUIK.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Windows to go"/></a><div class="content"><a class="title" href="/2020/05/12/Windows%20to%20go/" title="Windows to go">Windows to go</a><time datetime="2020-05-12T11:26:13.000Z" title="发表于 2020-05-12 19:26:13">2020-05-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/04/12/Excel%E7%94%9F%E6%88%90CSV%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/" title="Excel生成CSV格式文件"><img src="https://s1.ax1x.com/2020/10/26/BKSKvF.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Excel生成CSV格式文件"/></a><div class="content"><a class="title" href="/2020/04/12/Excel%E7%94%9F%E6%88%90CSV%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6/" title="Excel生成CSV格式文件">Excel生成CSV格式文件</a><time datetime="2020-04-12T10:36:13.000Z" title="发表于 2020-04-12 18:36:13">2020-04-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2018/11/03/DNS%E6%B1%A1%E6%9F%93%E9%97%AE%E9%A2%98/" title="DNS污染问题"><img src="https://s1.ax1x.com/2020/10/01/0K4kIU.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DNS污染问题"/></a><div class="content"><a class="title" href="/2018/11/03/DNS%E6%B1%A1%E6%9F%93%E9%97%AE%E9%A2%98/" title="DNS污染问题">DNS污染问题</a><time datetime="2018-11-03T10:12:30.000Z" title="发表于 2018-11-03 18:12:30">2018-11-03</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C-C/"><span class="card-category-list-name">C/C++</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Linux/"><span class="card-category-list-name">Linux</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/STM32/"><span class="card-category-list-name">STM32</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Windows/"><span class="card-category-list-name">Windows</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">开发工具</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"><span class="card-category-list-name">数据结构与算法</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%8E%A9%E6%9C%BA/"><span class="card-category-list-name">玩机</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/"><span class="card-category-list-name">电子技术基础</span><span class="card-category-list-count">5</span></a></li>
-            <li class="card-category-list-item more is-center"><a class="card-category-list-link-more" href="/categories/">
-                <span>查看更多</span><i class="fas fa-angle-right"></i></a></li>
-            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Android/" style="font-size: 1.17em; color: #999c9f">Android</a> <a href="/tags/C-C/" style="font-size: 1.3em; color: #99a1ac">C/C++</a> <a href="/tags/CMOS/" style="font-size: 1.1em; color: #999">CMOS</a> <a href="/tags/Centos/" style="font-size: 1.1em; color: #999">Centos</a> <a href="/tags/DNS/" style="font-size: 1.1em; color: #999">DNS</a> <a href="/tags/Git/" style="font-size: 1.1em; color: #999">Git</a> <a href="/tags/Linux/" style="font-size: 1.43em; color: #99a6b9">Linux</a> <a href="/tags/MT300v2/" style="font-size: 1.1em; color: #999">MT300v2</a> <a href="/tags/Macos/" style="font-size: 1.17em; color: #999c9f">Macos</a> <a href="/tags/SSR/" style="font-size: 1.1em; color: #999">SSR</a> <a href="/tags/STM32/" style="font-size: 1.3em; color: #99a1ac">STM32</a> <a href="/tags/TTL/" style="font-size: 1.1em; color: #999">TTL</a> <a href="/tags/Ubuntu/" style="font-size: 1.17em; color: #999c9f">Ubuntu</a> <a href="/tags/VS/" style="font-size: 1.1em; color: #999">VS</a> <a href="/tags/Windows/" style="font-size: 1.5em; color: #99a9bf">Windows</a> <a href="/tags/ios/" style="font-size: 1.1em; color: #999">ios</a> <a href="/tags/vim/" style="font-size: 1.17em; color: #999c9f">vim</a> <a href="/tags/%E4%BA%8C%E6%9E%81%E7%AE%A1/" style="font-size: 1.1em; color: #999">二极管</a> <a href="/tags/%E5%88%B7%E6%9C%BA/" style="font-size: 1.1em; color: #999">刷机</a> <a href="/tags/%E5%8A%A8%E6%80%81%E5%BA%93/" style="font-size: 1.1em; color: #999">动态库</a> <a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" style="font-size: 1.23em; color: #999ea6">开发工具</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.17em; color: #999c9f">数据结构</a> <a href="/tags/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB/" style="font-size: 1.1em; color: #999">文件共享</a> <a href="/tags/%E7%94%B5%E5%AD%90/" style="font-size: 1.37em; color: #99a4b2">电子</a> <a href="/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/" style="font-size: 1.1em; color: #999">路由器</a> <a href="/tags/%E9%9D%99%E6%80%81%E5%BA%93/" style="font-size: 1.1em; color: #999">静态库</a> <a href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/" style="font-size: 1.17em; color: #999c9f">黑苹果</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">五月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/11/"><span class="card-archive-list-date">十一月 2018</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/08/"><span class="card-archive-list-date">八月 2018</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/03/"><span class="card-archive-list-date">三月 2018</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/02/"><span class="card-archive-list-date">二月 2018</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item more is-center"><a class="card-archive-list-link-more" href="/archives/">
-              <span>查看更多</span><i class="fas fa-angle-right"  ></i></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">39</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2016-05-06T00:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">122.4k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-03-17T14:17:26.320Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2016 - 2021 By Tangle</div><div class="framework-info"><!-- span= _p('footer.framework') + ' '--><!-- a(href='https://hexo.io')= 'Hexo'--><!-- span.footer-separator |--><!-- span= _p('footer.theme') + ' '--><!-- a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'--></div><div class="footer_custom_text">Hi, welcome to my <a href="https://letanga.github.io/">blog</a>!</div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
- <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Android/" style="font-size: 1.17em; color: #999c9f">Android</a> <a href="/tags/C-C/" style="font-size: 1.3em; color: #99a1ac">C/C++</a> <a href="/tags/CMOS/" style="font-size: 1.1em; color: #999">CMOS</a> <a href="/tags/Centos/" style="font-size: 1.1em; color: #999">Centos</a> <a href="/tags/DNS/" style="font-size: 1.1em; color: #999">DNS</a> <a href="/tags/Git/" style="font-size: 1.1em; color: #999">Git</a> <a href="/tags/Linux/" style="font-size: 1.43em; color: #99a6b9">Linux</a> <a href="/tags/MT300v2/" style="font-size: 1.1em; color: #999">MT300v2</a> <a href="/tags/Macos/" style="font-size: 1.17em; color: #999c9f">Macos</a> <a href="/tags/SSR/" style="font-size: 1.1em; color: #999">SSR</a> <a href="/tags/STM32/" style="font-size: 1.3em; color: #99a1ac">STM32</a> <a href="/tags/TTL/" style="font-size: 1.1em; color: #999">TTL</a> <a href="/tags/Ubuntu/" style="font-size: 1.17em; color: #999c9f">Ubuntu</a> <a href="/tags/VS/" style="font-size: 1.1em; color: #999">VS</a> <a href="/tags/Windows/" style="font-size: 1.5em; color: #99a9bf">Windows</a> <a href="/tags/ios/" style="font-size: 1.1em; color: #999">ios</a> <a href="/tags/vim/" style="font-size: 1.17em; color: #999c9f">vim</a> <a href="/tags/%E4%BA%8C%E6%9E%81%E7%AE%A1/" style="font-size: 1.1em; color: #999">二极管</a> <a href="/tags/%E5%88%B7%E6%9C%BA/" style="font-size: 1.1em; color: #999">刷机</a> <a href="/tags/%E5%8A%A8%E6%80%81%E5%BA%93/" style="font-size: 1.1em; color: #999">动态库</a> <a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" style="font-size: 1.23em; color: #999ea6">开发工具</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.17em; color: #999c9f">数据结构</a> <a href="/tags/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB/" style="font-size: 1.1em; color: #999">文件共享</a> <a href="/tags/%E7%94%B5%E5%AD%90/" style="font-size: 1.37em; color: #99a4b2">电子</a> <a href="/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/" style="font-size: 1.1em; color: #999">路由器</a> <a href="/tags/%E9%9D%99%E6%80%81%E5%BA%93/" style="font-size: 1.1em; color: #999">静态库</a> <a href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/" style="font-size: 1.17em; color: #999c9f">黑苹果</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/09/"><span class="card-archive-list-date">九月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">五月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/11/"><span class="card-archive-list-date">十一月 2018</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/08/"><span class="card-archive-list-date">八月 2018</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/03/"><span class="card-archive-list-date">三月 2018</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/02/"><span class="card-archive-list-date">二月 2018</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">39</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2016-05-06T00:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">122.4k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-05-25T16:40:00.450Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2016 - 2021 By Tangle</div><div class="framework-info"><!-- span= _p('footer.framework') + ' '--><!-- a(href='https://hexo.io')= 'Hexo'--><!-- span.footer-separator |--><!-- span= _p('footer.theme') + ' '--><!-- a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'--></div><div class="footer_custom_text">Hi, welcome to my <a href="https://letanga.github.io/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script async="async">var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})
+setTimeout(function(){preloader.endLoading();}, 3000);</script></div><div class="js-pjax"><script>function subtitleType () {
   if (true) { 
     var typed = new Typed("#subtitle", {
       strings: "如果你想要清晰地思考，就必须远离人群。但是走得越远，你的处境就会越困难，受到的阻力也会越大,What does not kill me，makes me stronger".split(","),
@@ -401,17 +414,20 @@ CMOS集成电路主要由MOS管构成，如STM32单片机，电平规范如下�
 }
 
 if (true) {
-  if (typeof Typed === 'function') subtitleType()
-  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
 } else {
   subtitleType()
-}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="aplayer no-destroy" data-id="2780031324"  data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="auto" data-autoplay="false" muted></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+}</script></div><div class="aplayer no-destroy" data-id="2780031324"  data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="auto" data-autoplay="false" muted></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = true;
 POWERMODE.mobile = false;
 document.body.addEventListener('input', POWERMODE);
-</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
   'title',
-  '#config_change',
+  '#config-diff',
   '#body-wrap',
   '#rightside-config-hide',
   '#rightside-config-show',
@@ -430,11 +446,38 @@ var pjax = new Pjax({
   scrollRestoration: false
 })
 
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener toc scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
 document.addEventListener('pjax:complete', function () {
   window.refreshFn()
 
-  $('script[data-pjax]').each(function () {
-    $(this).parent().append($(this).remove())
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
   })
 
   GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
@@ -442,9 +485,11 @@ document.addEventListener('pjax:complete', function () {
   typeof chatBtnFn === 'function' && chatBtnFn()
   typeof panguInit === 'function' && panguInit()
 
-  if (typeof gtag === 'function') {
-    gtag('config', '', {'page_path': window.location.pathname});
-  }
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
 
   typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
 
@@ -459,23 +504,8 @@ document.addEventListener('pjax:complete', function () {
   typeof preloader === 'object' && preloader.endLoading()
 })
 
-
-document.addEventListener('pjax:send', function () {
-  typeof preloader === 'object' && preloader.initLoading()
-  
-  if (window.aplayers) {
-    for (let i = 0; i < window.aplayers.length; i++) {
-      if (!window.aplayers[i].options.fixed) {
-        window.aplayers[i].destroy()
-      }
-    }
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
   }
-
-  typeof typed === 'object' && typed.destroy()
-
-  $(window).off('scroll')
-
-  //reset readmode
-  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
-
-})</script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":250,"height":300},"mobile":{"show":true},"log":false});</script></body></html>
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":250,"height":300},"mobile":{"show":true},"log":false});</script></body></html>
