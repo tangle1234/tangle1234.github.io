@@ -3319,19 +3319,19 @@ li.categoryBar-list-item:nth-child(5)>span::after {
   content: '常用开发工具使用' !important;
 }
 li.categoryBar-list-item:nth-child(6)>span::after {
-  content: '自己写数据结构' !important;
+  content: '开源项目' !important;
 }
 li.categoryBar-list-item:nth-child(7)>span::after {
-  content: '各种手机路由器电脑等玩机' !important;
+  content: '自己写数据结构' !important;
 }
 li.categoryBar-list-item:nth-child(8)>span::after {
-  content: '电子技术基础' !important;
+  content: '电脑手机路由器搞机' !important;
 }
 li.categoryBar-list-item:nth-child(9)>span::after {
-  content: '玩转黑苹果' !important;
+  content: '电子技术基础' !important;
 }
 li.categoryBar-list-item {
-  width: 24% !important;
+  width: 32.3% !important;
 }
 @media screen and (max-width: 650px) {
   li.categoryBar-list-item {
