@@ -2243,16 +2243,6 @@ blockquote footer cite:before {
     width: 100% !important;
   }
 }
-@media screen and (min-width: 900px) {
-  .layout > div:first-child {
-    -webkit-box-ordinal-group: 2;
-    -moz-box-ordinal-group: 2;
-    -o-box-ordinal-group: 2;
-    -ms-flex-order: 2;
-    -webkit-order: 2;
-    order: 2;
-  }
-}
 .layout.hide-aside {
   max-width: 1000px;
 }
@@ -2414,7 +2404,13 @@ blockquote footer cite:before {
   border-radius: 8px 0 0 8px;
 }
 #recent-posts > .recent-post-item .right_radius {
-  border-radius: 8px 0 0 8px;
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -o-box-ordinal-group: 2;
+  -ms-flex-order: 2;
+  -webkit-order: 2;
+  order: 2;
+  border-radius: 0 8px 8px 0;
 }
 #recent-posts > .recent-post-item.ads-wrap {
   display: block !important;
@@ -2582,7 +2578,7 @@ blockquote footer cite:before {
 }
 @media screen and (min-width: 900px) {
   #aside-content {
-    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 @media screen and (max-width: 900px) {
@@ -3354,7 +3350,7 @@ li.categoryBar-list-item:nth-child(9)>span::after {
   content: '电子技术基础' !important;
 }
 li.categoryBar-list-item {
-  width: 32.3% !important;
+  width: 24% !important;
 }
 @media screen and (max-width: 650px) {
   li.categoryBar-list-item {
