@@ -884,6 +884,33 @@
     
     
     <entry>
+      <title>Github SSH key配置</title>
+      <link href="2016/08/29/Github%20SSH%20key%E9%85%8D%E7%BD%AE/"/>
+      <url>2016/08/29/Github%20SSH%20key%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<ol><li><p>配置用户名：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;letanga&quot;</span></span><br></pre></td></tr></table></figure></li><li><p>配置邮箱：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email <span class="string">&quot;247022862@qq.com&quot;</span></span><br></pre></td></tr></table></figure></li><li><p>生成公钥：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;247022864@qq.com&quot;</span></span><br></pre></td></tr></table></figure></li><li><p>查看和复制公钥：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure></li><li><p>Github添加公钥，打开Github，点头像-Settings;</p></li><li><p>点SSH and  GPG keys，右上角点New SSH key，Title随便填，key粘贴上去后点Add SSH key.</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+            <tag> Github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git版本控制</title>
       <link href="2016/08/21/Git%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
       <url>2016/08/21/Git%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/</url>
