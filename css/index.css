@@ -3322,18 +3322,15 @@ li.categoryBar-list-item:nth-child(4) {
   background: url(https://cdn.jsdelivr.net/gh/letanga/MyPictureBed/img/src=http---up.deskcity.org-pic_360-63-6c-cb-636ccbc9abccb0bdb383be89fd2f2fb3.jpg&refer=http---up.deskcity.jpg);
 }
 li.categoryBar-list-item:nth-child(5) {
-  background: url('https://cdn.jsdelivr.net/gh/letanga/MyPictureBed/img/src=http---img1.doubanio.com-view-note-large-public-p37673827.jpg&refer=http---img1.doubanio.jpg');
-}
-li.categoryBar-list-item:nth-child(6) {
   background: url('https://cdn.jsdelivr.net/gh/letanga/MyPictureBed/img/src=http---www.ljzfin.com-uploads-1-image-public-201507-20150730135549_938o8holhs.jpg&refer=http---www.ljzfin.jpg');
 }
-li.categoryBar-list-item:nth-child(7) {
+li.categoryBar-list-item:nth-child(6) {
   background: url('https://cdn.jsdelivr.net/gh/letanga/MyPictureBed/img/src=http---www.mianfeiwendang.com-pic-94cdb35c11bb8d2b922ab28f-1-810-jpg_6-1080-0-0-1080.jpg&refer=http---www.mianfeiwendang.jpg');
 }
-li.categoryBar-list-item:nth-child(8) {
+li.categoryBar-list-item:nth-child(7) {
   background: url('https://cdn.jsdelivr.net/gh/letanga/MyPictureBed/img/src=http---dpic.tiankong.com-jg-g8-QJ8580562941.jpg&refer=http---dpic.tiankong.jpg');
 }
-li.categoryBar-list-item:nth-child(9) {
+li.categoryBar-list-item:nth-child(8) {
   background: url('https://cdn.jsdelivr.net/gh/letanga/MyPictureBed/img/src=http---hbimg.b0.upaiyun.com-89220c7fb5f05a43cc05dadf8b17891bf0d10b3c64b50-yi5NeT_fw658&refer=http---hbimg.b0.upaiyun.jpg');
 }
 li.categoryBar-list-item:nth-child(1)>span::after {
