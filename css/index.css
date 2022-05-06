@@ -3340,21 +3340,18 @@ li.categoryBar-list-item:nth-child(2)>span::after {
   content: 'Linux学习记录' !important;
 }
 li.categoryBar-list-item:nth-child(3)>span::after {
-  content: '玩转STM32' !important;
+  content: '玩转单片机' !important;
 }
 li.categoryBar-list-item:nth-child(4)>span::after {
   content: '常用开发工具使用' !important;
 }
 li.categoryBar-list-item:nth-child(5)>span::after {
-  content: '开源项目' !important;
-}
-li.categoryBar-list-item:nth-child(6)>span::after {
   content: '自己写数据结构' !important;
 }
-li.categoryBar-list-item:nth-child(7)>span::after {
-  content: '电脑手机路由器搞机' !important;
+li.categoryBar-list-item:nth-child(6)>span::after {
+  content: '电脑手机路由器' !important;
 }
-li.categoryBar-list-item:nth-child(8)>span::after {
+li.categoryBar-list-item:nth-child(7)>span::after {
   content: '电子技术基础' !important;
 }
 li.categoryBar-list-item {
